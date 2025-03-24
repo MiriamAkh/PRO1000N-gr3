@@ -9,6 +9,11 @@
     <title>GCI</title>
     <link href='https://fonts.googleapis.com/css?family=Hammersmith One' rel='stylesheet'> <!-- Link til Hammersmith One font-->
     <link rel="stylesheet" href="styles.css"> <!-- CSS stylesheets link-->  
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Aner ikke hva denne gjør men gpt ville legge den til:) -->
+
+    <link rel="preconnect" href="https://fonts.googleapis.com"> <!--Linkz til Rubik font family-->
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap" rel="stylesheet">
 </head>
 
 
@@ -23,41 +28,57 @@
 
     <!--Hovedinnhold på nettsiden-->
     <main>
-        <h1>GIW overskrift hvis vi vil ha</h1>
-        <p> Her kan det ligge mye rart</p>
-
-        <p>Typisk ligger det en del sections her</p>
-        <p>Typisk ligger det en del sections her</p>
-        <p>Typisk ligger det en del sections her</p>
-        <p>Typisk ligger det en del sections her</p>
-        <p>Typisk ligger det en del sections her</p>
-        <p>Typisk ligger det en del sections her</p>
-        <p>Typisk ligger det en del sections her</p>
-        <p>Typisk ligger det en del sections her</p>
-        <p>Typisk ligger det en del sections her</p>
-        <p>Typisk ligger det en del sections her</p>
-        <p>Typisk ligger det en del sections her</p>
-        <p>Typisk ligger det en del sections her</p>
-        <p>Typisk ligger det en del sections her</p>
-        <p>Typisk ligger det en del sections her</p>
-        <p>Typisk ligger det en del sections her</p>
-        <p>Typisk ligger det en del sections her</p>
-        <p>Typisk ligger det en del sections her</p>
-        <p>Typisk ligger det en del sections her</p>
-        <p>Typisk ligger det en del sections her</p>
-        <p>Typisk ligger det en del sections her</p>
-        <p>Typisk ligger det en del sections her</p>
-        <p>Typisk ligger det en del sections her</p>
-        <p>Typisk ligger det en del sections her</p>
-        <p>Typisk ligger det en del sections her</p>
-        <p>Typisk ligger det en del sections her</p>
-        <p>Typisk ligger det en del sections her</p>
-        <p>Typisk ligger det en del sections her</p>
-        <p>Typisk ligger det en del sections her</p>
-        <p>Typisk ligger det en del sections her</p>
-        <p>Typisk ligger det en del sections her</p>
-        <p>Typisk ligger det en del sections her</p>
-        <p>Typisk ligger det en del sections her</p>
+        
+        <!-- Container for tekstboks og forsidebilde -->
+    <div class="container">
+        <!-- Tekstboksen, med knapp -->
+        <div class="text-box">
+            <h1>Hva er GreenCode?</h1>
+            <p>Grønn kode handler om <b>bærekraftig programvareutvikling</b> med energisparende algoritmer og optimal ressursbruk.</p>
+            <p>Du kan redusere karbonavtrykket og ta hensyn til klimaet - uten at det går på bekostning av ytelsen.</p>
+            <p>GreenCode Initiative tilbyr en rekke <b>gratis metoder og verktøy</b> som hjelper din bedrift med å implementere grønn kode.</p>
+            
+            <button class="scroll-button" onclick="scrollDown()">
+                <span><b>Kom i gang</b></span>
+                <img src="images/scrolleikon.svg" alt="Scroll Icon" class="button-icon">
+            </button>
+        </div>
+        
+        <!-- Forsidebilde -->
+        <img src="images/forsidebilde.png" alt="En pc med grønn vegetasjon" class="image">
+    </div>
+        
+  <!-- Section for clickable boxes with spacing from the content above -->
+  <div class="box-container">
+    <a href="https://www.vg.no" class="clickable-box">
+        <img src="images/verktøykasseikon.png" alt="Icon" class="box-icon">
+        <div class="box-text">
+            <h2>Verktøykasse</h2>
+            <p>Verktøy, rammeverk og opplæringsmateriale som hjelper utviklere med å skrive mer energieffektiv kode finner du i vår verktøykasse Ressurser</p>
+        </div>
+    </a>
+    <a href="https://www.nrk.no" class="clickable-box">
+        <img src="images/bærekraftkon.png" alt="Icon" class="box-icon">
+        <div class="box-text">
+            <h2>Artikler om grønn kode</h2>
+            <p>Ved å bruke metoder som sikrer kvalitet med minimalt miljøavtrykk, kan du spare både tid og energi. Lær mer om bruk av grønn kode og hvilke fordeler det gir</p>
+        </div>
+    </a>
+    <a href="https://www.dagbladet.no" class="clickable-box">
+        <img src="images/ICON.png" alt="Icon" class="box-icon">
+        <div class="box-text">
+            <h2>Case RJJ: En suksesshistorie</h2>
+            <p>RJJ Software har gjennomført anbefalte grep for miljøvern og økt bærekraft med stor suksess. Les mer om hva de har gjort riktig her</p>
+        </div>
+    </a>
+    <a href="https://www.klassekampen.no" class="clickable-box">
+        <img src="images/ICON.png" alt="Icon" class="box-icon">
+        <div class="box-text">
+            <h2>Kunnskapsbygging med sertifisering</h2>
+            <p>Kurs of sertifiseringer kan hjelpe deg og din bedrift på veien mot konkurransedyktighet. Utforsk hvordan du og din virksomhet kan bli GreenCode-sertifisert</p>
+        </div>
+    </a>
+</div>
 
 
 
@@ -70,6 +91,12 @@
 
     </footer>
 
+    <!-- Scroller ned med "kom i gang"-knapp -->
+    <script>
+        function scrollDown() {
+            window.scrollBy({ top: 500, behavior: 'smooth' });
+        }
+    </script>
 
     <script src="nav.js"></script>
 </body>

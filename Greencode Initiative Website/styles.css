@@ -99,3 +99,150 @@ nav {
   transform: rotate(180deg);
   transition: transform 0.3s; /* Gjør animasjonen litt myk */
 }
+
+
+/* --- Main --- */
+
+.container {
+  display: flex;
+  width: 100vw;
+  height: 13cm;
+}
+
+.text-box {
+  width: 523px; /* OBS FIKS HER */
+  height: 527px; /* OBS FIKS HER */
+  flex-shrink: 0;
+  padding: 17px;
+  box-sizing: border-box;
+  background: linear-gradient(171deg, #214127 38.88%, #CEEEC1 193.84%);
+  color: #FEFEFE;
+
+  font-family: Rubik;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 22px; /* 110% */
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  gap: 10px;
+}
+
+.scroll-button {
+  padding: 10px 15px;
+  border: none;
+  background-color: transparent;
+  color: #FEFEFE;
+  cursor: pointer;
+  border-radius: 5px;
+
+  font-family: Rubik;
+  font-size: 25px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 22px; /* 110% */
+
+  display: flex;
+  width: 246px;
+  height: 74px;
+  padding-left: 11px;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 12px;
+  flex-shrink: 0;
+}
+
+.image {
+  width: 75%; /* OBS FIKS HER */
+  height: 527px; /* OBS FIKS HER */
+  flex-shrink: 0;
+  aspect-ratio: 927/527;
+  object-fit: cover;
+}
+
+/* Boksene! */
+.box-container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 30px; /* Mellomrom mellom bokser */
+  margin-top: 80px; /* Mellomrom over bokser */
+  width: 100vw;
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.clickable-box {
+  display: flex;
+  align-items: center;
+  padding: 30px; /* Boksstørrelse */
+  border-radius: 12px;
+border-top: 2px solid #253D27;
+border-bottom: 2px solid #253D27;
+background: #E6E6E6;
+box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+
+h2 {color: #1C321E;
+font-family: Rubik;
+font-size: 36px;
+font-style: normal;
+font-weight: 500;
+line-height: normal;
+}
+
+color: #1C321E;
+font-family: Rubik;
+font-size: 20px;
+font-style: normal;
+font-weight: 400;
+line-height: normal;
+
+  text-decoration: none;
+  border-radius: 15px; /* Rundede hjørner */
+  transition: background-color 0.3s, color 0.3s;
+  
+}
+
+.clickable-box:hover {
+  h2 {color: #FEFEFE;
+  }
+  color: #FEFEFE;
+  border-radius: 12px;
+  border-top: 2px solid #253D27;
+  border-bottom: 2px solid #253D27;
+  background: #1C321E;
+  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+}
+
+.box-icon {
+  width: 60px; /* Increased icon size */
+  height: 60px;
+  margin-right: 15px;
+}
+
+.box-text {
+  flex-grow: 1;
+}
+
+/* "Responsive Styling" -chatgpt ¯\_(ツ)_/¯ */
+@media (max-width: 768px) {
+  .container {
+      flex-direction: column;
+      height: auto;
+  }
+  .text-box {
+      width: 100%;
+      height: auto;
+  }
+  .image {
+      width: 100%;
+      height: auto;
+  }
+  .box-container {
+    grid-template-columns: 1fr;
+}
+}
