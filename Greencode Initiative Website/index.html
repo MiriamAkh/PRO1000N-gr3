@@ -85,16 +85,33 @@
     </main>
 
     <!--Tekst langs bunnen-->
-    <footer>
-
-        <p>Typisk kontaktinfo og den typen ting</p>
-
+    <footer class="footer">
+        <div class="footer-content">
+            <a href="#" class="top-link" onclick="scrollToTop()">
+                <img src="images/footerpil.png" alt="Arrow Icon" class="footer-icon">
+                <span>Til toppen</span>
+            </a>
+            <a href="https://www.vg.no" class="footer-link">Kontakt</a>
+            <a href="https://www.vg.no" class="footer-link">FAQ</a>
+            <a href="https://www.vg.no" class="footer-link">Kildehenvisning</a>
+            <span class="footer-text">Nettstedet er utviklet av Team 3 for <i>GreenCode Initiative © 2025.</i></span>
+        </div>
+        <div class="footer-icons">
+            <img src="images/fIcon1.png" alt="Footer Icon">
+            <img src="images/fIcon2.png" alt="Footer Icon">
+            <img src="images/fIcon3.png" alt="Footer Icon">
+            <img src="images/fIcon4.png" alt="Footer Icon">
+            <img src="images/fIcon5.png" alt="Footer Icon">
+        </div>
     </footer>
 
-    <!-- Scroller ned med "kom i gang"-knapp -->
+    <!-- Scroller ned med "kom i gang" og "til toppen"-knapper -->
     <script>
         function scrollDown() {
             window.scrollBy({ top: 500, behavior: 'smooth' });
+        }
+        function scrollToTop() {
+            window.scrollTo({ top: 0, behavior: 'smooth' });
         }
     </script>
 

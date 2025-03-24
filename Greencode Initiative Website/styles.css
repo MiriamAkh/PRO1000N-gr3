@@ -228,8 +228,75 @@ line-height: normal;
   flex-grow: 1;
 }
 
+/* Footer! */
+.footer {
+  margin-top: 100px; /*Space mellom nettsideinnhold og footer */
+  background-color: #DCDCDC;
+  padding: 20px;
+  position: relative;
+  bottom: 0;
+  width: 100%;
+  text-align: center;
+
+  color: #232323; /* Tekst */
+font-family: Rubik;
+font-size: 20px;
+font-style: normal;
+font-weight: 400;
+line-height: normal;
+
+
+/* Footer: content layout */
+.footer-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  padding: 10px 5%;
+}
+
+/* Footer: Top link section */
+.top-link {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  text-decoration: none;
+  color: black;
+  font-weight: bold;
+}
+
+/* Footer: Underline on hover */
+.top-link span:hover,
+.footer-link:hover {
+  text-decoration: underline;
+}
+
+/* Footer: links styling */
+.footer-link {
+  margin: 0 20px;
+  color: black;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+/* Footer: Text-alignment */
+.footer-text {
+  margin-left: auto;
+  font-size: 14px;
+  font-weight: bold;
+}
+
+/* Footer: Ikoner */
+.footer-icons {
+  display: flex;
+  justify-content: flex-end;
+  gap: 10px;
+  margin-top: 10px;
+  padding-right: 5%;
+}
+
 /* "Responsive Styling" -chatgpt ¯\_(ツ)_/¯ */
-@media (max-width: 768px) {
+@media screen and (max-width: 768px) {
   .container {
       flex-direction: column;
       height: auto;
@@ -244,5 +311,19 @@ line-height: normal;
   }
   .box-container {
     grid-template-columns: 1fr;
+}
+.footer-content {
+  flex-direction: column;
+  text-align: center;
+  gap: 10px;
+}
+
+.footer-text {
+  margin-left: 0;
+  text-align: center;
+}
+
+.footer-icons {
+  justify-content: center;
 }
 }
