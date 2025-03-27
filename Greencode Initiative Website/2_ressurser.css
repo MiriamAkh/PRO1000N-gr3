@@ -1,0 +1,442 @@
+nav {
+    display: flex;
+    gap: 2%;
+    background-color: #F1F1F1;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+}
+
+
+.nav-knapp {
+    color: #52CB68;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 18px;
+    flex: 2;    
+    font-size: 24px;
+    font-family: "Hammersmith One";
+    margin-top: 16px;
+    margin-bottom: 16px;
+    cursor: pointer; 
+}
+
+.nav-knapp:hover {
+    background-color: #52CB68;
+    color: #F1F1F1;
+}
+
+.nedtrekk-hovedmeny {
+  flex: 2;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 18px;
+  list-style-type: none;
+  background-color: #F1F1F1;
+  padding: 0;
+  margin-top: 16px;
+  margin-bottom: 16px;
+}
+
+.nedtrekk-hovedmeny:hover {
+  background-color: #52CB68;
+  border-bottom-left-radius: 0;
+  border-bottom-right-radius: 0;
+}
+
+.nedtrekk-hovedmeny:hover .nav-knapp {
+  color: #F1F1F1;
+}
+
+/* Menypunkt */
+.nedtrekk-hovedmeny > li {
+  flex: 2;
+  display: inline-block; /*Viser menypunkter ved siden av hverandre */
+  position: relative;    /* Viktig for absolutte posisjonering av dropdown */
+  height: 100%;
+}
+
+
+/* Selve nedtrekksmenyen som kommer frem */
+.nedtrekk-undermeny {
+  display: none;        /* Skjult som standard */
+  position: absolute;   /* Posisjoneres i forhold til .dropdown */
+  background-color: #52CB68; /* Grønn bakgrunn */
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+  min-width: 150px;     /* Bredde på menyen */
+  width: 100%;
+  border-bottom-left-radius: 18px;
+  border-bottom-right-radius: 18px;
+}
+
+/* Elementene i nedtrekksmenyen */
+.nedtrekk-undermeny li a {
+  color: #F1F1F1;          /* Hvit tekst */
+  display: block;
+  padding: 10px;
+  text-decoration: none;
+}
+
+/* Hover-effekt på hvert menypunkt i nedtrekksmenyen */
+.nedtrekk-undermeny li a:hover {
+  background: linear-gradient(to bottom,transparent, #006400)
+  
+}
+
+/* Når man holder musen over .dropdown, vis menyen */
+.nedtrekk-hovedmeny-punkt:hover .nedtrekk-undermeny {
+  display: block;
+  border-top: 1px solid black;
+}
+
+/* Rotér pilen opp når menyen er synlig */
+.nedtrekk-hovedmeny-punkt:hover .pil {
+  transform: rotate(180deg);
+  transition: transform 0.3s; /* Gjør animasjonen litt myk */
+}
+
+
+/* --- Main --- */
+
+.container {
+  width: 100vw;
+  height: 25vw;
+  flex-shrink: 0;
+  margin-top: 20px;
+  box-sizing: border-box;
+  background: linear-gradient(171deg, #214127 38.88%, #CEEEC1 193.84%);
+  color: #FEFEFE;
+  display: flex;
+  width: 100vw;
+  height: 27vw;
+  align-items: center;
+  padding: 0 10%;
+}
+
+.text-box {
+  font-family: Rubik;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: normal;
+  line-height: 120%; /* 110% */
+  
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: left;
+  gap: 10px;
+}
+
+.tilbake {
+  color: none;
+  border: none;
+  padding: none;
+  cursor: pointer;
+  width: 5vw;  /* Juster bredde etter behov */
+  background-image: none;
+  background-size: contain; /* Sikrer at bildet passer inn i ikonet */
+  background-repeat: no-repeat; /* Hindrer gjentagelse av bildet */
+  background-position: center; /* Sentraliserer bildet i ikonet */
+  margin-right: 2vw;
+  margin-left: none;
+  transition: background-image 0.3s;
+}
+
+.tilbake:hover{
+  content: url('images/tilbake_hover.png');
+}
+
+
+.topp-bilde {
+  width: 25vw;
+  max-height: 25vw;
+}
+
+.scroll-button {
+  padding: 10px 15px;
+  border: none;
+  background-color: transparent;
+  color: #FEFEFE;
+  cursor: pointer;
+  border-radius: 5px;
+
+  font-family: Rubik;
+  font-size: 25px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 22px; /* 110% */
+
+  display: flex;
+  width: 246px;
+  height: 74px;
+  padding-left: 11px;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 12px;
+  flex-shrink: 0;
+}
+
+.image {
+  width: 75%; /* OBS FIKS HER */
+  height: 527px; /* OBS FIKS HER */
+  flex-shrink: 0;
+  aspect-ratio: 927/527;
+  object-fit: cover;
+}
+
+/* Boksene! */
+.box-container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 60px; /* Mellomrom mellom bokser */
+  margin-top: 60px; /* Mellomrom over bokser */
+  width: 90vw; /*holder boksene innenfor horisontal scroll for nå */
+  margin-left: 60px;
+  margin-right: 60px;
+}
+
+.clickable-box {
+  display: flex;
+  align-items: center;
+  padding: 15px; /* Boksstørrelse */
+  border-radius: 12px;
+  border-top: 2px solid #253D27;
+  border-bottom: 2px solid #253D27;
+  background: #E6E6E6;
+  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+
+h2 {color: #1C321E;
+  font-family: Rubik;
+  font-size: 36px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+  display: flex;
+}
+
+color: #1C321E;
+  font-family: Rubik;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  text-decoration: none;
+  border-radius: 15px; /* Rundede hjørner */
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.clickable-box:hover {
+  h2 {color: #FEFEFE;
+  }
+  color: #FEFEFE;
+  border-radius: 12px;
+  border-top: 2px solid #253D27;
+  border-bottom: 2px solid #253D27;
+  background: #1C321E;
+  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.box-icon {
+  width: 5vw;
+  height: 5vw;
+  margin-right: 10px;
+  transition: transform 0.3s;
+}
+
+.box-text {
+  flex-grow: 1;
+}
+
+/*IKONER I BOKSER VED HOVER*/
+#box1:hover #icon1 {
+  transform: scale(1.1);
+  content: url('images/bærekraftkon_hover.png');
+}
+
+#box2:hover #icon2 {
+  transform: scale(1.1);
+  content: url('images/speed_hover.png');
+}
+
+#box3:hover #icon3 {
+  transform: scale(1.1);
+  content: url('images/checklist_hover.png');
+}
+
+#box4:hover #icon4 {
+  transform: scale(1.1);
+  content: url('images/database_hover.png');
+}
+
+#box5:hover #icon5 {
+  transform: scale(1.1);
+  content: url('images/terminal_hover.png');
+}
+
+#box6:hover #icon6 {
+  transform: scale(1.1);
+  content: url('images/connect_hover.png');
+}
+
+#box7:hover #icon7 {
+  transform: scale(1.1);
+  content: url('images/algorithm_hover.png');
+}
+
+#box8:hover #icon8 {
+  transform: scale(1.1);
+  content: url('images/certified_hover.png');
+}
+
+/* Vanlig tekst eller innhold */
+/* Boksene! */
+.innhold-container {
+  display: grid;
+  gap: 60px; /* Mellomrom mellom bokser */
+  margin-top: 60px; /* Mellomrom over bokser */
+  width: 90vw; /*holder boksene innenfor horisontal scroll for nå */
+  margin-left: 60px;
+  margin-right: 60px;
+}
+.innhold {
+  vertical-align: top;
+  align-items: center;
+  padding: 5vw; /* Marger i boksen */
+  border-radius: 0px 20px 20px 0px;
+  border-right: 3px solid #C8C8C8;
+  border-left: 3px solid #C8C8C8;
+  background: #E6E6E6;
+
+h2 {color: #1C321E;
+  font-family: Rubik;
+  font-size: 36px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+  display: flex;
+}
+
+color: #1C321E;
+  font-family: Rubik;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  text-decoration: none;
+  border-radius: 15px; /* Rundede hjørner */
+  transition: background-color 0.3s, color 0.3s;
+}
+
+/* Footer! */
+.footer {
+  margin-top: 70px; /*Space mellom nettsideinnhold og footer */
+  background-color: #DCDCDC;
+  padding: 20px;
+  position: relative;
+  bottom: 0;
+  width: 100%;
+  text-align: center;
+
+  color: #232323; /* Tekst */
+font-family: Rubik;
+font-size: 20px;
+font-style: normal;
+font-weight: 400;
+line-height: normal;
+
+
+/* Footer: content layout */
+.footer-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  padding: 10px 5%;
+}
+
+/* Footer: Top link section */
+.top-link {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  text-decoration: none;
+  color: black;
+  font-weight: bold;
+}
+
+/* Footer: Underline on hover */
+.top-link span:hover,
+.footer-link:hover {
+  text-decoration: underline;
+}
+
+/* Footer: links styling */
+.footer-link {
+  margin: 0 20px;
+  color: black;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+/* Footer: Text-alignment */
+.footer-text {
+  margin-left: auto;
+  font-size: 14px;
+  font-weight: bold;
+}
+
+/* Footer: Ikoner */
+.footer-icons {
+  display: flex;
+  justify-content: flex-end;
+  gap: 10px;
+  margin-top: 10px;
+  padding-right: 5%;
+}
+
+/* "Responsive Styling" -chatgpt ¯\_(ツ)_/¯ */
+@media screen and (max-width: 768px) {
+  .container {
+      flex-direction: column;
+      height: auto;
+  }
+  .text-box {
+      width: 100%;
+      height: auto;
+  }
+  .image {
+      width: 100%;
+      height: auto;
+  }
+  .box-container {
+    grid-template-columns: 1fr;
+}
+.footer-content {
+  flex-direction: column;
+  text-align: center;
+  gap: 10px;
+}
+
+.footer-text {
+  margin-left: 0;
+  text-align: center;
+}
+
+.footer-icons {
+  justify-content: center;
+}
+}
+}

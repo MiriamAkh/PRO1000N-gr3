@@ -59,7 +59,7 @@ let omBaerekraft = [
 createButtonNedtrekk("OM BÆREKRAFT", omBaerekraft);
 
 
-createButtonLink("Ressurser", "https://www.vg.no");
+createButtonLink("Ressurser", "2_ressurser.html");
 createButtonLink("SERTIFISERING", "https://www.vg.no");
 
 let omOssMeny = [
