@@ -120,16 +120,16 @@ nav {
 
 .text-box {
   font-family: Rubik;
-  font-size: 20px;
+  font-size: 1.5vw;
   font-style: normal;
   font-weight: normal;
-  line-height: 120%; /* 110% */
+  line-height: 150%; /* 110% */
   
   display: flex;
   flex: 1;
   flex-direction: column;
   justify-content: center;
-  align-items: center;
+  align-items: left;
   text-align: left;
   gap: 10px;
 }
@@ -302,11 +302,10 @@ color: #1C321E;
 }
 
 /* Vanlig tekst eller innhold */
-/* Boksene! */
 .innhold-container {
   display: grid;
   gap: 60px; /* Mellomrom mellom bokser */
-  margin-top: 60px; /* Mellomrom over bokser */
+  margin-top: 20px; /* Ikke mellomrom til grønn topp */
   width: 90vw; /*holder boksene innenfor horisontal scroll for nå */
   margin-left: 60px;
   margin-right: 60px;
