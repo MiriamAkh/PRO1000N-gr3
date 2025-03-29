@@ -1,8 +1,20 @@
+let navbar = document.getElementById("navbar");
 //Setter inn til venstre i navbaren
-let img = document.createElement("img");
-img.src = "images/logo.png";
-img.style.flex = 1;
-document.getElementById("navbar").appendChild(img);
+let divLogo = document.createElement("div");
+divLogo.addEventListener("click", function() {
+  window.location.href = "index.html";
+});
+divLogo.classList.add("logo")
+let logoTopp = document.createElement("p");
+logoTopp.classList.add("logo-topp", "logo-tekst");
+logoTopp.innerHTML = `GreenCode`;
+divLogo.appendChild(logoTopp);
+let logoBunn = document.createElement("p");
+logoBunn.classList.add("logo-bunn", "logo-tekst");
+logoBunn.innerHTML = `Initiative`;
+divLogo.appendChild(logoBunn);
+navbar.appendChild(divLogo);
+
 
 //lager en knapp med knapptekst og knappegenskaper, men uten funksjon. Brukes av createButtonLink og createButtonNedtrekk
 function createButton(knappTekst) {
@@ -18,7 +30,7 @@ function createButtonLink(knappTekst, link) {
   p.addEventListener("click", function() {
       window.location.href = link;
     });   
-  document.getElementById("navbar").appendChild(p);
+  navbar.appendChild(p);
 }
 
 //Lager en nedrekksmeny
@@ -28,7 +40,6 @@ function createButtonNedtrekk(knappTekst, liste) {
   hUl.classList.add("nedtrekk-hovedmeny");
   let hLi = document.createElement("li");
   hLi.classList.add("nedtrekk-hovedmeny-punkt");
-  knappTekst = `${knappTekst} <span class="pil">&#x25BE</span>`
   let p = createButton(knappTekst);
   p.classList.add("nedtrekk-hovedmeny-knapp");
   hLi.appendChild(p);
@@ -47,7 +58,7 @@ function createButtonNedtrekk(knappTekst, liste) {
   })
   hLi.appendChild(uUl);
   hUl.appendChild(hLi);
-  document.getElementById("navbar").appendChild(hUl);
+  navbar.appendChild(hUl);
 }
 
 
@@ -56,35 +67,25 @@ let omBaerekraft = [
   {tekst: "Grønn kode", link: "https://www.vg.no"},
   {tekst: "Case-Studie", link: "https://www.vg.no"},
 ]
-createButtonNedtrekk("OM BÆREKRAFT", omBaerekraft);
+createButtonNedtrekk(`OM BÆREKRAFT<span class="pil">&#x25BE</span>`, omBaerekraft);
 
 
-createButtonLink("Ressurser", "2_ressurser.html");
-createButtonLink("SERTIFISERING", "https://www.vg.no");
+createButtonLink("RESSURSER", "https://www.vg.no");
+
+let sertifisering = [
+  {tekst: "Informasjon", link: "https://www.vg.no"},
+  {tekst: "Søknadsskjema", link: "https://www.vg.no"},
+]
+
+createButtonNedtrekk(`SERTIFISERING<span class="pil">&#x25BE</span>`, sertifisering);
 
 let omOssMeny = [
   {tekst: "Hvem er vi", link: "https://www.vg.no"},
   {tekst: "Kontakt", link: "https://www.vg.no"},
   {tekst: "FAQ", link: "https://www.vg.no"},
 ]
-createButtonNedtrekk("OM OSS", omOssMeny);
+createButtonNedtrekk(`OM OSS<span class="pil">&#x25BE</span> &nbsp`, omOssMeny);
 
-let navHoyde = document.getElementById("navbar").offsetHeight;
-document.getElementById("nav-bakgrunn").style.height = navHoyde + "px";
-
-
-
-//<nav id="navbar">
-//<ul class="nedtrekk-hovedmeny">
-//  <li class="nedtrekk-hovedmeny-punkt">
-//    <p class="nav-knapp nedtrekk-hovedmeny-knapp"> 
-//      OM OSS <span class="pil">▼</span>
-//   </p>
-//    <ul class="nedtrekk-undermeny">
-//      <li><a href="http://www.vg.no">HVEM ER VI?</a></li>
-//      <li><a href="#">KONTAKT</a></li>
-//      <li><a href="#">FAQ</a></li>
-//    </ul>
-//  </li>
-//</ul>
-//</nav> 
+let div = document.createElement("div")
+div.style.width = "8px"
+navbar.appendChild(div);

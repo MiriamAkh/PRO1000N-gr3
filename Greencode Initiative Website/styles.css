@@ -1,62 +1,87 @@
+:root {
+  --navnbar-bakgrunnsfarge: #F1F1F1;
+  --navbar-tekst-farge: #325438;
+  --navbar-hoyde: 97px;
+}
+
+html, body {
+  margin: 0;
+  padding: 0;
+}
+
+/* --- Navbar --- */
+
+
 nav {
     display: flex;
-    gap: 2%;
-    background-color: #F1F1F1;
+    justify-content: flex-end;
+    align-items: center;
+    background-color: var(--navnbar-bakgrunnsfarge);
     width: 100%;
     position: fixed;
     top: 0;
     left: 0;
+    gap: 16px;
+    height: var(--navbar-hoyde);
 }
 
+.logo {
+  margin-right: auto;
+  color: #54895E;
+  font-family: Roboto;
+  font-size: 40px;
+  line-height: 35px;
+  cursor: pointer;
+}
+
+.logo-tekst {
+  margin: 0;
+  padding: 0;
+}
+
+.logo:hover .logo-tekst{
+  color: #214127;
+}
+
+.logo-topp {
+  font-weight: 700;
+}
+
+.logo-bunn {
+  font-weight: 400;
+  letter-spacing: 5.6px;
+}
 
 .nav-knapp {
-    color: #52CB68;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    border-radius: 18px;
-    flex: 2;    
+    color: var(--navbar-tekst-farge);
+    border-radius: 18px;  
     font-size: 24px;
     font-family: "Hammersmith One";
-    margin-top: 16px;
-    margin-bottom: 16px;
-    cursor: pointer; 
+    padding: 8px;
+    margin: 0;
+    cursor: pointer;
 }
 
 .nav-knapp:hover {
-    background-color: #52CB68;
-    color: #F1F1F1;
+    background-color: var(--navbar-tekst-farge);
+    color: var(--navnbar-bakgrunnsfarge);
 }
 
 .nedtrekk-hovedmeny {
-  flex: 2;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  border-radius: 18px;
-  list-style-type: none;
-  background-color: #F1F1F1;
   padding: 0;
-  margin-top: 16px;
-  margin-bottom: 16px;
 }
 
-.nedtrekk-hovedmeny:hover {
-  background-color: #52CB68;
+.nedtrekk-hovedmeny:hover .nedtrekk-hovedmeny-knapp {
+  background-color: var(--navbar-tekst-farge);
+  color: var(--navnbar-bakgrunnsfarge);
   border-bottom-left-radius: 0;
   border-bottom-right-radius: 0;
 }
 
-.nedtrekk-hovedmeny:hover .nav-knapp {
-  color: #F1F1F1;
-}
-
 /* Menypunkt */
 .nedtrekk-hovedmeny > li {
-  flex: 2;
   display: inline-block; /*Viser menypunkter ved siden av hverandre */
   position: relative;    /* Viktig for absolutte posisjonering av dropdown */
-  height: 100%;
 }
 
 
@@ -64,28 +89,27 @@ nav {
 .nedtrekk-undermeny {
   display: none;        /* Skjult som standard */
   position: absolute;   /* Posisjoneres i forhold til .dropdown */
-  background-color: #52CB68; /* Grønn bakgrunn */
-  margin: 0;
+  background-color: var(--navbar-tekst-farge); /* Grønn bakgrunn */
   padding: 0;
   list-style-type: none;
-  min-width: 150px;     /* Bredde på menyen */
   width: 100%;
   border-bottom-left-radius: 18px;
   border-bottom-right-radius: 18px;
 }
 
+
 /* Elementene i nedtrekksmenyen */
 .nedtrekk-undermeny li a {
-  color: #F1F1F1;          /* Hvit tekst */
+  color: var(--navnbar-bakgrunnsfarge);          /* Hvit tekst */
   display: block;
-  padding: 10px;
   text-decoration: none;
+  border-top-left-radius: 0;
+  border-top-right-radius: 0;
 }
 
 /* Hover-effekt på hvert menypunkt i nedtrekksmenyen */
 .nedtrekk-undermeny li a:hover {
-  background: linear-gradient(to bottom,transparent, #006400)
-  
+  background: linear-gradient(0deg, #000F02 0%, #325438 100%);
 }
 
 /* Når man holder musen over .dropdown, vis menyen */
@@ -96,8 +120,20 @@ nav {
 
 /* Rotér pilen opp når menyen er synlig */
 .nedtrekk-hovedmeny-punkt:hover .pil {
+  display: inline-block;
   transform: rotate(180deg);
   transition: transform 0.3s; /* Gjør animasjonen litt myk */
+}
+
+
+#banner {
+  width: 100%;
+  min-height: 200px;
+  top: 0;
+  left: 0;
+  background: linear-gradient(to bottom,#214127, #567656);
+  padding-top: var(--navbar-hoyde);
+  color: white;
 }
 
 
@@ -327,3 +363,5 @@ line-height: normal;
   justify-content: center;
 }
 }
+}
+
