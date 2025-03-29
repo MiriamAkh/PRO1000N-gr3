@@ -14,7 +14,6 @@ nav {
     position: fixed;
     top: 0;
     left: 0;
-    gap: 2%;
     height: var(--navbar-hoyde);
 }
 
@@ -25,7 +24,7 @@ nav {
   font-size: 40px;
   line-height: 35px;
   cursor: pointer;
-  margin-left: 4%;
+  margin-left: 1%;
 }
 
 .logo-tekst {
@@ -48,39 +47,36 @@ nav {
 
 .nav-knapp {
     color: var(--navbar-tekst-farge);
-    border-radius: 18px;  
     font-size: 24px;
     font-family: "Hammersmith One";
     padding: 8px;
     margin: 0;
     cursor: pointer;
+    border-radius: 18px;
 }
 
-.nav-knapp:hover {
+.nivå1 {
+  display: flex;
+  margin-right: 1%;
+  gap: 16px;
+}
+
+.nivå1-punkt:hover p{
     background-color: var(--navbar-tekst-farge);
     color: var(--navnbar-bakgrunnsfarge);
 }
 
-.nedtrekk-hovedmeny {
-  padding: 0;
-}
 
-.nedtrekk-hovedmeny:hover .nedtrekk-hovedmeny-knapp {
-  background-color: var(--navbar-tekst-farge);
-  color: var(--navnbar-bakgrunnsfarge);
-  border-bottom-left-radius: 0;
-  border-bottom-right-radius: 0;
-}
 
 /* Menypunkt */
-.nedtrekk-hovedmeny > li {
+.nivå1 > li {
   display: inline-block; /*Viser menypunkter ved siden av hverandre */
   position: relative;    /* Viktig for absolutte posisjonering av dropdown */
 }
 
 
 /* Selve nedtrekksmenyen som kommer frem */
-.nedtrekk-undermeny {
+.nivå2 {
   display: none;        /* Skjult som standard */
   position: absolute;   /* Posisjoneres i forhold til .dropdown */
   background-color: var(--navbar-tekst-farge); /* Grønn bakgrunn */
@@ -93,38 +89,110 @@ nav {
 
 
 /* Elementene i nedtrekksmenyen */
-.nedtrekk-undermeny li a {
+.nivå2 li a {
   color: var(--navnbar-bakgrunnsfarge);          /* Hvit tekst */
   display: block;
   text-decoration: none;
+}
+
+/* Hover-effekt på hvert menypunkt i nedtrekksmenyen */
+.nivå2 li a:hover {
+  background: linear-gradient(0deg, #000F02 0%, #325438 100%);
   border-top-left-radius: 0;
   border-top-right-radius: 0;
 }
 
-/* Hover-effekt på hvert menypunkt i nedtrekksmenyen */
-.nedtrekk-undermeny li a:hover {
-  background: linear-gradient(0deg, #000F02 0%, #325438 100%);
-}
 
 /* Når man holder musen over .dropdown, vis menyen */
-.nedtrekk-hovedmeny-punkt:hover .nedtrekk-undermeny {
+.nivå1-punkt:hover .nedtrekk-knapp{
+  border-bottom-left-radius: 0;
+  border-bottom-right-radius: 0;
+}
+
+.nivå1-punkt:hover .nivå2 {
   display: block;
   border-top: 1px solid black;
 }
 
 /* Rotér pilen opp når menyen er synlig */
-.nedtrekk-hovedmeny-punkt:hover .pil {
+.nivå1-punkt:hover .pil {
   display: inline-block;
   transform: rotate(180deg);
   transition: transform 0.3s; /* Gjør animasjonen litt myk */
 }
+
 
 #banner {
   padding-top: var(--navbar-hoyde);
 }
 
 
-/* Stiler for skjermer med maks bredde på 600px */
-@media only screen and (max-width: 768px) {
+/* Stiler for skjermer med maks bredde på 1024px */
+@media only screen and (max-width: 1024px) {
+
+     
+      /* Hamburger-ikonet */
+      .hamburger {
+        width: 60px;
+        height: 40px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        cursor: pointer;
+        margin: 20px;
+      }
+      
+      .hamburger span {
+        display: block;
+        height: 8px;
+        background: var(--navbar-tekst-farge);
+        border-radius: 2px;
+      }
+      
+
+      .nivå1.aktiv{
+        display: block;
+        position: absolute;  /* eller fixed, avhengig av ditt oppsett */
+        top: 0; /* eller 100px, om det er navbarets høyde */
+        right: 100px;
+        z-index: 1; /* Sørger for at menyen ligger over andre elementer */
+        border-radius: 18px;
+        background-color: var(--navbar-tekst-farge); 
+      }
+
+
+    /* Under- og sub-undermenyer */
+      .nivå1{
+        display: none;       /* Skjules som standard */
+        margin-left: 1%;
+      }
+
+      .nivå1 > li {
+        display: block; /*Viser menypunkter ved siden av hverandre */
+        position: relative;    /* Viktig for absolutte posisjonering av dropdown */     
+      }
+
+      .nav-knapp {
+        color: var(--navnbar-bakgrunnsfarge)   
+      }
+
+      /* Plassering av første nivå undermeny (for eksempel under "Tjenester") */
+      .nivå1-punkt:hover > .nivå2 {
+        display: block;
+        top: 0;
+        left: 10vw;
+        z-index: 2;
+        border-radius: 18px;
+        background-color: #54895E;
+
+      }
+
+      .nivå2 li a:hover {
+        background: linear-gradient(0deg, #000F02 0%, #325438 100%);
+        border-radius: 18px;
+      }
+
+
+
 
 }

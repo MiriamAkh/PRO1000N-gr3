@@ -4,46 +4,51 @@ function createButton(knappTekst) {
   let p = document.createElement("p");
   p.classList.add("nav-knapp");
   p.innerHTML = knappTekst;
+  
   return p;
 }
 
 //Funksjon som leggerfunksjonalitet inn i en menyknapp som ikke skal være nedtrekk
 function createButtonLink(knappTekst, link) {
+  let li1 = document.createElement("li");
+  li1.classList.add("nivå1-punkt")
   p = createButton(knappTekst)
   p.addEventListener("click", function() {
       window.location.href = link;
     });   
-  navbar.appendChild(p);
+  li1.appendChild(p);
+  ul1.appendChild(li1)
+
 }
 
 //Funksjon som leggerfunksjonalitet inn i en menyknapp som skal være nedtrekk
 function createButtonNedtrekk(knappTekst, liste) {
+  
   //Lager hovedknappen man hovrer over for å få nedtrekksmenyen frem
-  let hUl = document.createElement("ul");
-  hUl.classList.add("nedtrekk-hovedmeny");
-  let hLi = document.createElement("li");
-  hLi.classList.add("nedtrekk-hovedmeny-punkt");
+  let li1 = document.createElement("li");
+  li1.classList.add("nivå1-punkt")
   let p = createButton(knappTekst);
-  p.classList.add("nedtrekk-hovedmeny-knapp");
-  hLi.appendChild(p);
+  p.classList.add("nedtrekk-knapp")
+  li1.appendChild(p);
   
   //Lager nedtrekksmenyen
-  let uUl = document.createElement("ul");
-  uUl.classList.add("nedtrekk-undermeny");
+  let ul2 = document.createElement("ul");
+  ul2.classList.add("nivå2");
   liste.forEach(knapp => {
-    let uLi = document.createElement("li");
+    let li2 = document.createElement("li");
+    li2.classList.add("nivå2-punkt")
     let a = document.createElement("a");
     a.href = knapp.link;
     a.innerHTML = knapp.tekst
     a.classList.add("nav-knapp")
-    uLi.appendChild(a)
-    uUl.appendChild(uLi)
+    li2.appendChild(a)
+    ul2.appendChild(li2)
+    
   })
-  hLi.appendChild(uUl);
-  hUl.appendChild(hLi);
-  navbar.appendChild(hUl);
+  li1.appendChild(ul2);
+  ul1.appendChild(li1);
+  navbar.appendChild(ul1);
 }
-
 
 
 //Lager et alias for navbaren
@@ -65,6 +70,7 @@ logoBunn.innerHTML = `Initiative`;
 divLogo.appendChild(logoBunn);
 navbar.appendChild(divLogo);
 
+
 // Lister med undermenyer
 let omBaerekraft = [
   {tekst: "Grønn kode", link: "1_bærekraft_artikler.html"},
@@ -82,13 +88,25 @@ let omOssMeny = [
   {tekst: "FAQ", link: "4_omoss_FAQ.html"},
 ]
 
+
+
+let ul1 = document.createElement("ul");
+ul1.classList.add("nivå1");
+
 //Lager menyknappene
 createButtonNedtrekk(`OM BÆREKRAFT<span class="pil">&#x25BE</span>`, omBaerekraft);
 createButtonLink("RESSURSER", "2_ressurser.html");
 createButtonNedtrekk(`SERTIFISERING<span class="pil">&#x25BE</span>`, sertifisering);
 createButtonNedtrekk(`OM OSS<span class="pil">&#x25BE</span> &nbsp`, omOssMeny);
 
-//Legger til et tomt element til slutt for å få litt avstand til scroll
-let div = document.createElement("div")
-div.style.width = "0"
-navbar.appendChild(div);
+let divHam = document.createElement("div");
+divHam.classList.add("hamburger")
+for (let i = 0; i < 3; i++) {
+  let span = document.createElement("span");
+  divHam.appendChild(span)
+}
+divHam.addEventListener("click", function() {
+  ul1.classList.toggle("aktiv");
+});
+navbar.appendChild(ul1)
+navbar.appendChild(divHam)
