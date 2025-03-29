@@ -1,22 +1,5 @@
-let navbar = document.getElementById("navbar");
-//Setter inn til venstre i navbaren
-let divLogo = document.createElement("div");
-divLogo.addEventListener("click", function() {
-  window.location.href = "index.html";
-});
-divLogo.classList.add("logo")
-let logoTopp = document.createElement("p");
-logoTopp.classList.add("logo-topp", "logo-tekst");
-logoTopp.innerHTML = `GreenCode`;
-divLogo.appendChild(logoTopp);
-let logoBunn = document.createElement("p");
-logoBunn.classList.add("logo-bunn", "logo-tekst");
-logoBunn.innerHTML = `Initiative`;
-divLogo.appendChild(logoBunn);
-navbar.appendChild(divLogo);
-
-
-//lager en knapp med knapptekst og knappegenskaper, men uten funksjon. Brukes av createButtonLink og createButtonNedtrekk
+//Funksjon som lager en knapp med knapptekst men uten funksjonalitet. 
+// Brukes av createButtonLink og createButtonNedtrekk
 function createButton(knappTekst) {
   let p = document.createElement("p");
   p.classList.add("nav-knapp");
@@ -24,7 +7,7 @@ function createButton(knappTekst) {
   return p;
 }
 
-//Lager en menyknapp som ikke skal værenedtrekk
+//Funksjon som leggerfunksjonalitet inn i en menyknapp som ikke skal være nedtrekk
 function createButtonLink(knappTekst, link) {
   p = createButton(knappTekst)
   p.addEventListener("click", function() {
@@ -33,7 +16,7 @@ function createButtonLink(knappTekst, link) {
   navbar.appendChild(p);
 }
 
-//Lager en nedrekksmeny
+//Funksjon som leggerfunksjonalitet inn i en menyknapp som skal være nedtrekk
 function createButtonNedtrekk(knappTekst, liste) {
   //Lager hovedknappen man hovrer over for å få nedtrekksmenyen frem
   let hUl = document.createElement("ul");
@@ -63,29 +46,49 @@ function createButtonNedtrekk(knappTekst, liste) {
 
 
 
+//Lager et alias for navbaren
+let navbar = document.getElementById("navbar");
+
+//Setter logo inn til venstre i navbaren
+let divLogo = document.createElement("div");
+divLogo.addEventListener("click", function() {
+  window.location.href = "index.html";
+});
+divLogo.classList.add("logo")
+let logoTopp = document.createElement("p");
+logoTopp.classList.add("logo-topp", "logo-tekst");
+logoTopp.innerHTML = `GreenCode`;
+divLogo.appendChild(logoTopp);
+let logoBunn = document.createElement("p");
+logoBunn.classList.add("logo-bunn", "logo-tekst");
+logoBunn.innerHTML = `Initiative`;
+divLogo.appendChild(logoBunn);
+navbar.appendChild(divLogo);
+
+// Lister med undermenyer
 let omBaerekraft = [
   {tekst: "Grønn kode", link: "1_bærekraft_artikler.html"},
   {tekst: "Case-Studie", link: "1_bærekraft_casestudie.html"},
 ]
-createButtonNedtrekk(`OM BÆREKRAFT<span class="pil">&#x25BE</span>`, omBaerekraft);
-
-
-createButtonLink("RESSURSER", "2_ressurser.html");
 
 let sertifisering = [
   {tekst: "Informasjon", link: "3_sertifisering_info.html"},
   {tekst: "Søknadsskjema", link: "3_sertifisering_søknad.html"},
 ]
 
-createButtonNedtrekk(`SERTIFISERING<span class="pil">&#x25BE</span>`, sertifisering);
-
 let omOssMeny = [
   {tekst: "Hvem er vi", link: "4_omoss_hvemervi.html"},
   {tekst: "Kontakt", link: "4_omoss_kontakt.html"},
   {tekst: "FAQ", link: "4_omoss_FAQ.html"},
 ]
+
+//Lager menyknappene
+createButtonNedtrekk(`OM BÆREKRAFT<span class="pil">&#x25BE</span>`, omBaerekraft);
+createButtonLink("RESSURSER", "2_ressurser.html");
+createButtonNedtrekk(`SERTIFISERING<span class="pil">&#x25BE</span>`, sertifisering);
 createButtonNedtrekk(`OM OSS<span class="pil">&#x25BE</span> &nbsp`, omOssMeny);
 
+//Legger til et tomt element til slutt for å få litt avstand til scroll
 let div = document.createElement("div")
-div.style.width = "8px"
+div.style.width = "0"
 navbar.appendChild(div);
