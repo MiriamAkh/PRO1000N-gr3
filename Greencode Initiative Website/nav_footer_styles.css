@@ -119,11 +119,5 @@
 }
 
 #banner {
-  width: 100%;
-  min-height: 200px;
-  top: 0;
-  left: 0;
-  background: linear-gradient(to bottom,#214127, #567656);
   padding-top: var(--navbar-hoyde);
-  color: white;
 }

@@ -1,119 +1,14 @@
-nav {
-    display: flex;
-    gap: 2%;
-    background-color: #F1F1F1;
-    width: 100%;
-    position: fixed;
-    top: 0;
-    left: 0;
-}
-
-
-.nav-knapp {
-    color: #52CB68;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    border-radius: 18px;
-    flex: 2;    
-    font-size: 24px;
-    font-family: "Hammersmith One";
-    margin-top: 16px;
-    margin-bottom: 16px;
-    cursor: pointer; 
-}
-
-.nav-knapp:hover {
-    background-color: #52CB68;
-    color: #F1F1F1;
-}
-
-.nedtrekk-hovedmeny {
-  flex: 2;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  border-radius: 18px;
-  list-style-type: none;
-  background-color: #F1F1F1;
-  padding: 0;
-  margin-top: 16px;
-  margin-bottom: 16px;
-}
-
-.nedtrekk-hovedmeny:hover {
-  background-color: #52CB68;
-  border-bottom-left-radius: 0;
-  border-bottom-right-radius: 0;
-}
-
-.nedtrekk-hovedmeny:hover .nav-knapp {
-  color: #F1F1F1;
-}
-
-/* Menypunkt */
-.nedtrekk-hovedmeny > li {
-  flex: 2;
-  display: inline-block; /*Viser menypunkter ved siden av hverandre */
-  position: relative;    /* Viktig for absolutte posisjonering av dropdown */
-  height: 100%;
-}
-
-
-/* Selve nedtrekksmenyen som kommer frem */
-.nedtrekk-undermeny {
-  display: none;        /* Skjult som standard */
-  position: absolute;   /* Posisjoneres i forhold til .dropdown */
-  background-color: #52CB68; /* Grønn bakgrunn */
-  margin: 0;
-  padding: 0;
-  list-style-type: none;
-  min-width: 150px;     /* Bredde på menyen */
-  width: 100%;
-  border-bottom-left-radius: 18px;
-  border-bottom-right-radius: 18px;
-}
-
-/* Elementene i nedtrekksmenyen */
-.nedtrekk-undermeny li a {
-  color: #F1F1F1;          /* Hvit tekst */
-  display: block;
-  padding: 10px;
-  text-decoration: none;
-}
-
-/* Hover-effekt på hvert menypunkt i nedtrekksmenyen */
-.nedtrekk-undermeny li a:hover {
-  background: linear-gradient(to bottom,transparent, #006400)
-  
-}
-
-/* Når man holder musen over .dropdown, vis menyen */
-.nedtrekk-hovedmeny-punkt:hover .nedtrekk-undermeny {
-  display: block;
-  border-top: 1px solid black;
-}
-
-/* Rotér pilen opp når menyen er synlig */
-.nedtrekk-hovedmeny-punkt:hover .pil {
-  transform: rotate(180deg);
-  transition: transform 0.3s; /* Gjør animasjonen litt myk */
-}
-
-
 /* --- Main --- */
 
 .container {
   width: 100vw;
-  height: 25vw;
   flex-shrink: 0;
   margin-top: 20px;
   box-sizing: border-box;
   background: linear-gradient(171deg, #214127 38.88%, #CEEEC1 193.84%);
   color: #FEFEFE;
   display: flex;
-  width: 100vw;
-  height: 27vw;
+  height: 35vw;
   align-items: center;
   padding: 0 10%;
 }

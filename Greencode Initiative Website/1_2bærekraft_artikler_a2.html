@@ -10,7 +10,9 @@
     <title>SETT INN TITTEL (liten tekst på tab øverst) HER</title>
 
     <!-- Eventuelle CSS stylesheets links her-->
-
+    <link href='https://fonts.googleapis.com/css?family=Hammersmith One' rel='stylesheet'> <!-- Link til Hammersmith One font-->
+    <link rel="stylesheet" href="nav_footer_styles.css"> <!-- CSS stylesheets link for navbar og footer-->
+    <link rel="stylesheet" href="1_bærekraft.css"> <!-- CSS stylesheets link-->  
 </head>
 
 
@@ -18,26 +20,13 @@
 
     <!--Topptekst/overskrift-->
     <header>
-
-        <!--Skjelettet til navbar med navigering i eksisterende utkast til mappestruktur-->
-        <nav>
-
-            <!--Klikkbar logo øverst hvis vi vil ha (kan fjernes og linkes på mange ulike måter, ikke vær redd for å slette/erstatte)-->
-            <a href="../index.html">Greencode Initiative/annen tekst</a>
-            
-            <!--Knappelinker til navbar øverst-->
-            <ul>
-                <!-- OBS UTDATERT-->
-                <li><a href="../underside1/underside1.html">Underside1</a></li>
-                <li><a href="../underside2/underside2.html">Underside2</a></li>                    
-                <li><a href="../underside3/underside3.html">Underside3</a></li>
-                <li><a href="../underside4/underside4.html">Underside4</a></li>
-                <li><a href="../underside5/underside5.html">Underside5</a></li>
-            </ul>
-
-        </nav>
-
+        <!--Tom navbar som fylles med innhold fra JavaScript-->
+        <nav id="navbar"></nav> 
     </header>
+
+    <div id="banner">
+        <h1>GIW overskrift hvis vi vil ha</h1>
+    </div>
 
     <!--Hovedinnhold på nettsiden-->
     <main>
@@ -56,7 +45,7 @@
 
     </footer>
 
-
+    <script src="nav.js"></script>
 
 </body>
 

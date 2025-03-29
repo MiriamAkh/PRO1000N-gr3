@@ -1,143 +1,16 @@
-:root {
-  --navnbar-bakgrunnsfarge: #F1F1F1;
-  --navbar-tekst-farge: #325438;
-  --navbar-hoyde: 97px;
-}
-
 html, body {
   margin: 0;
   padding: 0;
 }
 
-/* --- Navbar --- */
-
-
-nav {
-    display: flex;
-    justify-content: flex-end;
-    align-items: center;
-    background-color: var(--navnbar-bakgrunnsfarge);
-    width: 100%;
-    position: fixed;
-    top: 0;
-    left: 0;
-    gap: 16px;
-    height: var(--navbar-hoyde);
-}
-
-.logo {
-  margin-right: auto;
-  color: #54895E;
-  font-family: Roboto;
-  font-size: 40px;
-  line-height: 35px;
-  cursor: pointer;
-}
-
-.logo-tekst {
-  margin: 0;
-  padding: 0;
-}
-
-.logo:hover .logo-tekst{
-  color: #214127;
-}
-
-.logo-topp {
-  font-weight: 700;
-}
-
-.logo-bunn {
-  font-weight: 400;
-  letter-spacing: 5.6px;
-}
-
-.nav-knapp {
-    color: var(--navbar-tekst-farge);
-    border-radius: 18px;  
-    font-size: 24px;
-    font-family: "Hammersmith One";
-    padding: 8px;
-    margin: 0;
-    cursor: pointer;
-}
-
-.nav-knapp:hover {
-    background-color: var(--navbar-tekst-farge);
-    color: var(--navnbar-bakgrunnsfarge);
-}
-
-.nedtrekk-hovedmeny {
-  padding: 0;
-}
-
-.nedtrekk-hovedmeny:hover .nedtrekk-hovedmeny-knapp {
-  background-color: var(--navbar-tekst-farge);
-  color: var(--navnbar-bakgrunnsfarge);
-  border-bottom-left-radius: 0;
-  border-bottom-right-radius: 0;
-}
-
-/* Menypunkt */
-.nedtrekk-hovedmeny > li {
-  display: inline-block; /*Viser menypunkter ved siden av hverandre */
-  position: relative;    /* Viktig for absolutte posisjonering av dropdown */
-}
-
-
-/* Selve nedtrekksmenyen som kommer frem */
-.nedtrekk-undermeny {
-  display: none;        /* Skjult som standard */
-  position: absolute;   /* Posisjoneres i forhold til .dropdown */
-  background-color: var(--navbar-tekst-farge); /* Grønn bakgrunn */
-  padding: 0;
-  list-style-type: none;
-  width: 100%;
-  border-bottom-left-radius: 18px;
-  border-bottom-right-radius: 18px;
-}
-
-
-/* Elementene i nedtrekksmenyen */
-.nedtrekk-undermeny li a {
-  color: var(--navnbar-bakgrunnsfarge);          /* Hvit tekst */
-  display: block;
-  text-decoration: none;
-  border-top-left-radius: 0;
-  border-top-right-radius: 0;
-}
-
-/* Hover-effekt på hvert menypunkt i nedtrekksmenyen */
-.nedtrekk-undermeny li a:hover {
-  background: linear-gradient(0deg, #000F02 0%, #325438 100%);
-}
-
-/* Når man holder musen over .dropdown, vis menyen */
-.nedtrekk-hovedmeny-punkt:hover .nedtrekk-undermeny {
-  display: block;
-  border-top: 1px solid black;
-}
-
-/* Rotér pilen opp når menyen er synlig */
-.nedtrekk-hovedmeny-punkt:hover .pil {
-  display: inline-block;
-  transform: rotate(180deg);
-  transition: transform 0.3s; /* Gjør animasjonen litt myk */
-}
-
+/* --- Main --- */
 
 #banner {
-  width: 100%;
-  min-height: 200px;
   top: 0;
   left: 0;
-  background: linear-gradient(to bottom,#214127, #567656);
-  padding-top: var(--navbar-hoyde);
+  background: linear-gradient(171deg, #214127 38.88%, #CEEEC1 193.84%);
   color: white;
 }
-
-
-/* --- Main --- */
 
 .container {
   display: flex;

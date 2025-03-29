@@ -64,25 +64,25 @@ function createButtonNedtrekk(knappTekst, liste) {
 
 
 let omBaerekraft = [
-  {tekst: "Grønn kode", link: "https://www.vg.no"},
-  {tekst: "Case-Studie", link: "https://www.vg.no"},
+  {tekst: "Grønn kode", link: "1_bærekraft_artikler.html"},
+  {tekst: "Case-Studie", link: "1_bærekraft_casestudie.html"},
 ]
 createButtonNedtrekk(`OM BÆREKRAFT<span class="pil">&#x25BE</span>`, omBaerekraft);
 
 
-createButtonLink("RESSURSER", "https://www.vg.no");
+createButtonLink("RESSURSER", "2_ressurser.html");
 
 let sertifisering = [
-  {tekst: "Informasjon", link: "https://www.vg.no"},
-  {tekst: "Søknadsskjema", link: "https://www.vg.no"},
+  {tekst: "Informasjon", link: "3_sertifisering_info.html"},
+  {tekst: "Søknadsskjema", link: "3_sertifisering_søknad.html"},
 ]
 
 createButtonNedtrekk(`SERTIFISERING<span class="pil">&#x25BE</span>`, sertifisering);
 
 let omOssMeny = [
-  {tekst: "Hvem er vi", link: "https://www.vg.no"},
-  {tekst: "Kontakt", link: "https://www.vg.no"},
-  {tekst: "FAQ", link: "https://www.vg.no"},
+  {tekst: "Hvem er vi", link: "4_omoss_hvemervi.html"},
+  {tekst: "Kontakt", link: "4_omoss_kontakt.html"},
+  {tekst: "FAQ", link: "4_omoss_FAQ.html"},
 ]
 createButtonNedtrekk(`OM OSS<span class="pil">&#x25BE</span> &nbsp`, omOssMeny);
 
