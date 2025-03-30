@@ -77,7 +77,7 @@ navbar.appendChild(divLogo);
 
 
 // Lister med undermenyer
-let omBaerekraft = [
+let baerekraft = [
   {tekst: "Grønn kode", link: "1_bærekraft_artikler.html"},
   {tekst: "Case-Studie", link: "1_bærekraft_casestudie.html"},
 ]
@@ -99,7 +99,7 @@ let ul1 = document.createElement("ul");
 ul1.classList.add("nivå1");
 
 //Lager menyknappene
-createButtonNedtrekk(`OM BÆREKRAFT<span class="pil">&#x25BE</span>`, omBaerekraft);
+createButtonNedtrekk(`BÆREKRAFT<span class="pil">&#x25BE</span>`, baerekraft);
 createButtonLink("RESSURSER", "2_ressurser.html");
 createButtonNedtrekk(`SERTIFISERING<span class="pil">&#x25BE</span>`, sertifisering);
 createButtonNedtrekk(`OM OSS<span class="pil">&#x25BE</span> &nbsp`, omOssMeny);
