@@ -1,3 +1,8 @@
+//Navbar
+
+
+
+
 //Funksjon som lager en knapp med knapptekst men uten funksjonalitet. 
 // Brukes av createButtonLink og createButtonNedtrekk
 function createButton(knappTekst) {
@@ -110,3 +115,58 @@ divHam.addEventListener("click", function() {
 });
 navbar.appendChild(ul1)
 navbar.appendChild(divHam)
+
+
+
+
+
+//Footer
+
+let footer = document.getElementById("footer");
+let footDivLenker = document.createElement("div");
+footDivLenker.classList.add("footer-content");
+let footLenker = [
+  {tekst: `<img src="images/footerpil.png" alt="Arrow Icon" class="footer-icon"><span>Til toppen</span>`, link: "#", class: "top-link"},
+  {tekst: "Kontakt", link: "4_omoss_kontakt.html", class: "footer-link"},
+  {tekst: "FAQ", link: "4_omoss_FAQ.html", class: "footer-link"},
+  {tekst: "Kildehenvisninger", link: "https://www.vg.no", class: "footer-link"}
+];
+
+footLenker.forEach(knapp => {
+  let a = document.createElement("a");
+  a.classList.add(knapp.class);
+  a.href = knapp.link;
+  a.innerHTML = knapp.tekst;
+  footDivLenker.appendChild(a);
+});
+
+
+
+let footSpan = document.createElement("span");
+footSpan.classList.add("footer-text");
+footSpan.innerHTML = `Nettstedet er utviklet av Team 3 for <i>GreenCode Initiative © 2025.</i>`;
+footDivLenker.appendChild(footSpan);
+footer.appendChild(footDivLenker);
+
+let footDivIcons = document.createElement("div");
+footDivIcons.classList.add("footer-icons");
+
+let footerIcons = [
+  {src: "images/fIcon1.png", alt: "Footer Icon", link: "https://www.vg.no"},
+  {src: "images/fIcon2.png", alt: "Footer Icon", link: "https://www.vg.no"},
+  {src: "images/fIcon3.png", alt: "Footer Icon", link: "https://www.vg.no"},
+  {src: "images/fIcon4.png", alt: "Footer Icon", link: "https://www.vg.no"},
+  {src: "images/fIcon5.png", alt: "Footer Icon", link: "https://www.vg.no"}
+]
+
+footerIcons.forEach(icon => {
+  let a = document.createElement("a");
+  a.href = icon.link;
+  let img = document.createElement("img");
+  img.src = icon.src;
+  img.alt = icon.alt;
+  a.appendChild(img);
+  footDivIcons.appendChild(a);
+})
+footer.appendChild(footDivIcons);
+
