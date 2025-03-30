@@ -250,20 +250,5 @@ color: #1C321E;
   }
   .box-container {
     grid-template-columns: 1fr;
-}
-.footer-content {
-  flex-direction: column;
-  text-align: center;
-  gap: 10px;
-}
-
-.footer-text {
-  margin-left: 0;
-  text-align: center;
-}
-
-.footer-icons {
-  justify-content: center;
-}
-}
+  }
 }

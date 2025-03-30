@@ -199,77 +199,83 @@ nav {
 
 
 
-
-
-
-
-
-/* Stiler for skjermer med maks bredde på 1024px */
-@media only screen and (max-width: 1024px) {
-
-     
-      /* Hamburger-ikonet */
-      .hamburger {
-        width: 60px;
-        height: 40px;
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between;
-        cursor: pointer;
-        margin: 20px;
-      }
+/* Stiler for skjermer med maks bredde på 1000px */
+@media only screen and (max-width: 1000px) {
+  /* Hamburger-ikonet */
+  .hamburger {
+    width: 60px;
+    height: 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    cursor: pointer;
+    margin: 20px;
+  }
       
-      .hamburger span {
-        display: block;
-        height: 8px;
-        background: var(--navbar-tekst-farge);
-        border-radius: 2px;
-      }
+  .hamburger span {
+    display: block;
+    height: 8px;
+    background: var(--navbar-tekst-farge);
+    border-radius: 2px;
+  }
       
 
-      .nivå1.aktiv{
-        display: block;
-        position: absolute;  /* eller fixed, avhengig av ditt oppsett */
-        top: 0; /* eller 100px, om det er navbarets høyde */
-        right: 100px;
-        z-index: 1; /* Sørger for at menyen ligger over andre elementer */
-        border-radius: 18px;
-        background-color: var(--navbar-tekst-farge); 
-      }
+  .nivå1.aktiv{
+    display: block;
+    position: absolute;  /* eller fixed, avhengig av ditt oppsett */
+    top: 0; /* eller 100px, om det er navbarets høyde */
+    right: 100px;
+    z-index: 1; /* Sørger for at menyen ligger over andre elementer */
+    border-radius: 18px;
+    background-color: var(--navbar-tekst-farge); 
+  }
 
 
-    /* Under- og sub-undermenyer */
-      .nivå1{
-        display: none;       /* Skjules som standard */
-        margin-left: 1%;
-      }
+  /* Under- og sub-undermenyer */
+  .nivå1{
+    display: none;       /* Skjules som standard */
+    margin-left: 1%;
+  }
 
-      .nivå1 > li {
-        display: block; /*Viser menypunkter ved siden av hverandre */
-        position: relative;    /* Viktig for absolutte posisjonering av dropdown */     
-      }
+  .nivå1 > li {
+    display: block; /*Viser menypunkter ved siden av hverandre */
+    position: relative;    /* Viktig for absolutte posisjonering av dropdown */     
+  }
 
-      .nav-knapp {
-        color: var(--navnbar-bakgrunnsfarge)   
-      }
+  .nav-knapp {
+    color: var(--navnbar-bakgrunnsfarge)   
+  }
 
-      /* Plassering av første nivå undermeny (for eksempel under "Tjenester") */
-      .nivå1-punkt:hover > .nivå2 {
-        display: block;
-        top: 0;
-        left: 10vw;
-        z-index: 2;
-        border-radius: 18px;
-        background-color: #54895E;
+  /* Plassering av første nivå undermeny (for eksempel under "Tjenester") */
+  .nivå1-punkt:hover > .nivå2 {
+    display: block;
+    top: 0;
+    left: 10vw;
+    z-index: 2;
+    border-radius: 18px;
+    background-color: #54895E;
+  }
 
-      }
-
-      .nivå2 li a:hover {
-        background: linear-gradient(0deg, #000F02 0%, #325438 100%);
-        border-radius: 18px;
-      }
-
-
+  .nivå2 li a:hover {
+    background: linear-gradient(0deg, #000F02 0%, #325438 100%);
+    border-radius: 18px;
+  }
+}
 
 
+@media screen and (max-width: 768px) {
+  .footer-content {
+    flex-direction: column;
+    text-align: center;
+    gap: 10px;
+  }
+
+  .footer-text {
+    margin-left: 0;
+    text-align: center;
+  }
+
+  .footer-icons {
+    justify-content: center;
+  }
 }
