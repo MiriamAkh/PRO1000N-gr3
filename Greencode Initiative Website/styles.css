@@ -16,7 +16,7 @@ html, body {
 
 
 .text-box {
-  width: 50%; /* OBS FIKS HER */
+  width: 36%; /* OBS FIKS HER */
   height: 100%; /* OBS FIKS HER */
   flex-shrink: 0;
   padding: 17px;
@@ -63,7 +63,7 @@ html, body {
 }
 
 #front-image {
-  width: 50%;
+  width: 64%;
   flex-shrink: 0;
   object-fit: cover;
 }
