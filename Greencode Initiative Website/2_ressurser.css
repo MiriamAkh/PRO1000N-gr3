@@ -15,7 +15,7 @@
   font-style: normal;
   font-weight: normal;
   line-height: 150%; /* 110% */
-  
+  margin-left: 5vw;
   display: flex;
   flex: 1;
   flex-direction: column;
@@ -35,51 +35,19 @@
   background-size: contain; /* Sikrer at bildet passer inn i ikonet */
   background-repeat: no-repeat; /* Hindrer gjentagelse av bildet */
   background-position: center; /* Sentraliserer bildet i ikonet */
-  margin-right: 2vw;
-  margin-left: none;
+  margin-left: 5vw;
+  margin-top: 5vw;
   transition: background-image 0.3s;
 }
 
 .tilbake:hover{
-  content: url('images/tilbake_hover.png');
+  transform: scale(1.2);
 }
 
 
 .topp-bilde {
   width: 25vw;
   max-height: 25vw;
-}
-
-.scroll-button {
-  padding: 10px 15px;
-  border: none;
-  background-color: transparent;
-  color: #FEFEFE;
-  cursor: pointer;
-  border-radius: 5px;
-
-  font-family: Rubik;
-  font-size: 25px;
-  font-style: normal;
-  font-weight: 400;
-  line-height: 22px; /* 110% */
-
-  display: flex;
-  width: 246px;
-  height: 74px;
-  padding-left: 11px;
-  justify-content: flex-end;
-  align-items: center;
-  gap: 12px;
-  flex-shrink: 0;
-}
-
-.image {
-  width: 75%; /* OBS FIKS HER */
-  height: 527px; /* OBS FIKS HER */
-  flex-shrink: 0;
-  aspect-ratio: 927/527;
-  object-fit: cover;
 }
 
 /* Boksene! */
