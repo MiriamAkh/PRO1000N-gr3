@@ -1,31 +1,85 @@
-#banner {
-    width: 100%;
-    flex-shrink: 0;
-    margin-top: 20px;
-    box-sizing: border-box;
-    background: linear-gradient(171deg, #214127 38.88%, #CEEEC1 193.84%);
-    color: #FEFEFE;
-    display: flex;
-    height: 22vw;
-    padding: 0 10%;
-
+    #banner {
+      display: flex;
+      width: 100%;
+      top: 0;
+      left: 0;
+      background: linear-gradient(171deg, #214127 38.88%, #CEEEC1 193.84%);
+      color: white;
+      justify-content: center;
+    }
     
-  }
-/* MRA: Dette er rotete, jeg skal rydde opp jeg lover O:-) */
-  .bannertekst {
-  width: 856px;
-  height: 155px;
-  flex-shrink: 0;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  gap: 10px;
-  align-items: flex-start;
+    #banner-container {
+      width: 60vw;
+      display: flex;  
+      padding-top: 20px;
+      padding-bottom: 20px;
+    }
+    
+    #banner-tekst {
+      flex: 64;
+      color:#FEFEFE;
+      font-family: Rubik;
+      font-size: 20px;
+    }
+    
+    #banner-tekst h1 {
+      font-size: 36px;
+    }
 
-  color: #FEFEFE;
-  font-family: Rubik;
-  font-size: 20px;
-  font-style: normal;
-  font-weight: 400;
-  line-height: 22px; /* 110% */
-  }
+  
+
+    .box-container {
+      display: flex;
+      flex-direction: column;
+      gap: 30px; /* Mellomrom mellom bokser */
+      margin-top: 80px; /* Mellomrom over bokser */
+      width: 100%;
+      max-width: 1200px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    
+    .clickable-box {
+      display: flex;
+      align-items: center;
+      padding: 30px; /* Boksstørrelse */
+      border-radius: 12px;
+    border-top: 2px solid #253D27;
+    border-bottom: 2px solid #253D27;
+    background: #E6E6E6;
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+    
+    h2 {color: #1C321E;
+    font-family: Rubik;
+    font-size: 36px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    transition: text-decoration 0.3s ease;
+    }
+    h2:hover {
+      text-decoration: underline;
+    }
+    
+    color: #1C321E;
+    font-family: Rubik;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    
+      text-decoration: none;
+      border-radius: 15px; /* Rundede hjørner */
+      transition: background-color 0.3s, color 0.3s;
+      
+    }
+    
+    .linjetekst {
+      display: flex;
+      gap: 15px; /* spacing between author and date */
+      align-items: center;
+    }
+
+    .linjetekst p {
+      margin: 0;
+    }
