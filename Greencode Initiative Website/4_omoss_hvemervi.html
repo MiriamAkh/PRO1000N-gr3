@@ -24,16 +24,45 @@
         <nav id="navbar"></nav> 
     </header>
 
-    <div id="banner">
-        <h1>GIW overskrift hvis vi vil ha</h1>
-    </div>
-
     <!--Hovedinnhold på nettsiden-->
     <main>
 
-        <p> Underside 2 kan for eksempel være verktøykasse</p>
+    <!-- Container for tekstboks og forsidebilde -->
+    <div id="banner">
+     <div class="text-box">
+        <h1>Hvem er vi?</h1>
+        <p>GreenCode Initiative (GCI) er resultatet av et sterkt ønske blant miljøbevisste software-utviklere om å forbedre bærekraften i programvareutviklings-prosessen.</p>
+        <p>Vi startet som en liten gruppe studenter og akademikere ved Universitetet i Norge (UiN) i 2021, og har på kort tid vokst til en internasjonalt anerkjent organisasjon som jobber for å fremme bærekraftige programmeringspraksiser.</p>
+        <p>Vi er i dag en non-profit, ideell NGO som er avhengig av støttespillere og bidragsytere. UIN støtter fremdeles vårt arbeid, og vi får statsstøtte gjennom Klima- og Miljødepartementet (KLD) i Norge.</p>
+     </div>
+    
+    <!-- Forsidebilde -->
+    <img src="images/om_oss_forsidebilde.png" alt="Bilde av oss som står bak GWI" class="image" id="front-image">
+  </div>
 
-        <p>Typisk ligger det en del sections her</p>
+    <!--Hovedinnhold på nettsiden-->
+
+    <div class="container">
+      <div class="container-tekst"> 
+            <h1>Vår motivasjon og misjon</h1>
+            <p>Vi er drevet av en sterk bekymring for klimaendringene og menneskers økologiske fotavtrykk på miljø og natur. IT-industrien står for 2% av alle karbonutslipp, og vi som utviklere må stå til ansvar for dette. Samtidig har vi en sterk tro på at teknologi kan være en del av løsningen.</p>
+            <p><strong>Vår misjon</strong> er å utdanne, støtte og motivere utviklere til å bygge energieffektive applikasjoner, optimalisere ressursbruk og integrere miljøvennlige praksiser i alle faser av programvareutvikling. Med dette vil vi bidra til å redusere karbonavtrykket til programvareindustrien og bidra til en sunnere planet for fremtidige generasjoner.</p>
+          <div class="mission-image">
+            <img src="images/vår_misjon.png" alt="Illustrasjon av grønn IT og programmering">
+          </div>
+          <h1>Hva GreenCode Initiative gjør og tilbyr</h1>
+          <p>På GreenCode Initiative Website tilbyr vi en plattform der utviklere kan lære om de nyeste teknikkene og praksisene for grønn programmering.</p>
+          <ul>
+            <p>Plattformen gir tilgang til:</p>
+            <li><strong>Blogg om bærekraft innen IT:</strong> Artikler og forklaringer som forklarer konsepter og teknikker for bærekraftig programvareutvikling.</li>
+            <li><strong>Ressurser:</strong> Veiledninger, anbefalinger for verktøy og rammeverk som hjelper utviklere med å skrive mer energieffektiv kode.</li>
+            <li><strong>Fellesskap:</strong> Et forum der utviklere kan dele erfaringer, stille spørsmål og samarbeide om å finne løsninger på miljøutfordringer i teknologi.</li>
+            <li><strong>Case-studier:</strong> Eksempler på suksesshistorier fra bedrifter og utviklere som har implementert grønn kodepraksis og oppnådd betydelige forbedringer i energieffektivitet.</li>
+            <li><strong>Sertifisering:</strong> Et program hvor tech-bedrifter kan søke om sertifisering som godkjent GreenCode-bedrift.</li>
+          </ul>
+        </div>
+      </div>
+
 
 
     </main>
@@ -41,6 +70,13 @@
     <!--Tekst langs bunnen-->
     <footer id="footer">
     </footer>
+
+    <!-- Scrolle opp med "til toppen" knapp -->
+    <script>
+        function scrollToTop() {
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        }
+    </script>
 
     <script src="nav_footer.js"></script>
 
