@@ -41,3 +41,34 @@ html, body {
   object-fit: cover;
 }
 
+main {
+  display: block;
+}
+
+.container {
+  top:0;
+  display:block;
+  width: 70%;
+  background-color: #F1F1F1;
+  border-radius: 18px;
+  margin:auto;
+  margin-top: 60px;
+  padding-bottom: 36px;
+}
+
+.container-tekst {
+  width: 60vw;
+  font-family: Rubik;
+  color: #232323;
+  font-size: 18px;
+  margin:auto;
+}
+
+.container-tekst h1 {
+  color: #214127;
+  padding-top: 36px;
+}
+
+.container-tekst h1 {
+  font-size: 36px;
+}
