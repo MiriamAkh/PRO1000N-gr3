@@ -1,4 +1,6 @@
-    #banner {
+/* BANNER */
+   
+   #banner {
       display: flex;
       width: 100%;
       top: 0;
@@ -27,59 +29,187 @@
     }
 
   
+/* BOKSER */
 
     .box-container {
       display: flex;
       flex-direction: column;
-      gap: 30px; /* Mellomrom mellom bokser */
-      margin-top: 80px; /* Mellomrom over bokser */
+  
+      margin-top: 60px; /* Mellomrom over bokser */
       width: 100%;
       max-width: 1200px;
       margin-left: auto;
       margin-right: auto;
     }
-    
+  
     .clickable-box {
       display: flex;
-      align-items: center;
-      padding: 30px; /* Boksstørrelse */
+      height: 325px; /* GPT: Set this to match the image height */
+      align-items: stretch;
       border-radius: 12px;
-    border-top: 2px solid #253D27;
-    border-bottom: 2px solid #253D27;
-    background: #E6E6E6;
-    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
-    
-    h2 {color: #1C321E;
-    font-family: Rubik;
-    font-size: 36px;
-    font-style: normal;
-    font-weight: 500;
-    line-height: normal;
-    transition: text-decoration 0.3s ease;
-    }
-    h2:hover {
-      text-decoration: underline;
-    }
-    
-    color: #1C321E;
-    font-family: Rubik;
-    font-size: 20px;
-    font-style: normal;
-    font-weight: 400;
-    line-height: normal;
-    
+      border-top: 2px solid #253D27;
+      border-bottom: 2px solid #253D27;
+      background: #E6E6E6;
+      box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
       text-decoration: none;
-      border-radius: 15px; /* Rundede hjørner */
+      color: #1C321E;
+      font-family: Rubik;
+      font-size: 20px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: normal;
       transition: background-color 0.3s, color 0.3s;
-      
+      gap: 30px;
+      flex-direction: row;
+      flex-wrap: wrap;
+
+      padding: 0;
+      gap: 0;
+
+    }
+    
+    .box-image {
+      width: 289px;
+      height: 325px;
+      object-fit: cover;
+      flex-shrink: 0;
+      border-radius: 0;
+      margin: 0;
+      padding: 0;
+      display: block; /* Prevents inline image spacing */
+    }
+
+    .box-imageWide {  /* Til bildet på en av de nederste boksene som er litt bredere */
+      width: 460px;
+      height: 325px;
+      object-fit: cover;
+      flex-shrink: 0;
+      border-radius: 0;
+      margin: 0;
+      padding: 0;
+      display: block; /* Prevents inline image spacing */
+    }
+    
+    
+    .box-text {
+      flex: 1;
+      padding-left: 50px;
+      padding-right: 50px;
     }
     
     .linjetekst {
       display: flex;
-      gap: 15px; /* spacing between author and date */
+      gap: 15px;
+      align-items: center;
+
+    }
+    
+    .linjetekst p {
+      margin: 0;
+    }
+    
+    h2 {
+      color: #1C321E;
+      font-family: Rubik;
+      font-size: 36px;
+      font-style: normal;
+      font-weight: 500;
+      line-height: normal;
+      transition: text-decoration 0.3s ease;
+    }
+    
+    h2:hover {
+      text-decoration: underline;
+    }
+    
+    
+    @media (max-width: 768px) {
+      .clickable-box {
+        flex-direction: column;
+        align-items: flex-start;
+        height: auto; /* Remove fixed height on small screens */
+      }
+    
+      .box-image {
+        width: 100%;
+        height: auto;
+      }
+    
+      h2 {
+        font-size: 28px;
+      }
+    
+      .box-text {
+        width: 100%;
+      }
+    }
+
+/* CASE-STUDIE */
+
+    .casestd-box {
+      border-bottom-left-radius: 20px;
+      border-bottom-right-radius: 20px;
+      background: #F1F1F1;
+
+      display: flex;
+      flex-direction: column;
+      width: 100%;
+      top: 0;
+      left: 0;
+      justify-content: center;
+
+      width: 68vw; 
+      padding-top: 60px;
+      padding-bottom: 20px;
+
+      
+    }
+
+    main {
+      display: flex;
+      flex-direction: column;
       align-items: center;
     }
 
-    .linjetekst p {
-      margin: 0;
+    .casestd-text {
+      width: 1050px; /* Yikes, skalering må legges til */
+      height: 134px;
+      flex-shrink: 0;
+      flex: 64;
+      color: #232323;
+      font-family: Rubik;
+      font-size: 18px;
+      font-weight: 400;
+      line-height: 26px; /* 144.444% */
+
+      padding-right: 65px;
+      padding-left: 65px;
+    }
+
+    .casestd-brødtext {
+      width: 1080px; /* Yikes, skalering må legges til */
+      height: 134px;
+      flex-shrink: 0;
+      flex: 64;
+      color: #232323;
+      font-family: Rubik;
+      font-size: 18px;
+      font-weight: 400;
+      line-height: 26px; /* 144.444% - MRA: ???? Denne kommentaren kommer fra Figma, aner ikke hva greia er lol*/
+      padding-right: 65px;
+      padding-left: 65px;
+    }    
+
+    #rjjpadding {
+      width: 315px; /* ???? skalering?? */
+      height: 134px;
+      padding-top: 34px;
+      padding-left: 30px;
+      padding-bottom: 34px;
+      padding-right: 60px;
+    }
+
+    #h2padding {
+      padding-right: 65px;
+      padding-left: 65px;
     }
