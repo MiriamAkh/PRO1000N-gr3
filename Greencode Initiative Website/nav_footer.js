@@ -1,7 +1,12 @@
+// Lager en Favicon
+var faviconLink = document.createElement('link');
+faviconLink.rel = 'icon';
+faviconLink.type = 'image/x-icon'; // Change to "image/x-icon" if using a .ico file
+faviconLink.href = 'images/favicon.ico'; // Update the path to your favicon
+document.head.appendChild(faviconLink);
+
+
 //Navbar
-
-
-
 
 //Funksjon som lager en knapp med knapptekst men uten funksjonalitet. 
 // Brukes av createButtonLink og createButtonNedtrekk
