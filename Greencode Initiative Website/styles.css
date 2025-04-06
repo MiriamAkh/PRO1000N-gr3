@@ -16,25 +16,18 @@ html, body {
 
 
 .text-box {
-  width: 36%; /* OBS FIKS HER */
-  height: 100%; /* OBS FIKS HER */
-  flex-shrink: 0;
-  padding: 17px;
-  box-sizing: border-box;
-  background: linear-gradient(171deg, #214127 38.88%, #CEEEC1 193.84%);
-  color: #FEFEFE;
-
   font-family: Rubik;
-  font-size: 20px;
+  font-size: 1.5vw;
   font-style: normal;
-  font-weight: 400;
-  line-height: 22px; /* 110% */
-
+  font-weight: normal;
+  line-height: 150%; /* 110% */
+  margin-left: 5vw;
   display: flex;
+  flex: 1;
   flex-direction: column;
   justify-content: center;
-  align-items: center;
-  text-align: center;
+  align-items: left;
+  text-align: left;
   gap: 10px;
 }
 

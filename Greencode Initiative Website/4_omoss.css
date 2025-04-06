@@ -12,31 +12,42 @@ html, body {
   color: white;
 } 
 
-.text-box {
-  width: 50%; /* OBS FIKS HER */
-  height: 100%; /* OBS FIKS HER */
-  flex-shrink: 0;
-  padding: 17px;
-  box-sizing: border-box;
-  background: linear-gradient(171deg, #214127 38.88%, #CEEEC1 193.84%);
-  color: #FEFEFE;
+#banner-container {
+  width: 60vw;
+  display: flex;  
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
 
+#banner-tekst {
+  flex: 64;
+  color:#FEFEFE;
   font-family: Rubik;
   font-size: 20px;
-  font-style: normal;
-  font-weight: 400;
-  line-height: 22px; /* 110% */
+}
 
+#banner-tekst h1 {
+  font-size: 36px;
+}
+
+.text-box {
+  font-family: Rubik;
+  font-size: 1.5vw;
+  font-style: normal;
+  font-weight: normal;
+  line-height: 150%; /* 110% */
+  margin-left: 5vw;
   display: flex;
+  flex: 1;
   flex-direction: column;
   justify-content: center;
-  align-items: center;
-  text-align: center;
+  align-items: left;
+  text-align: left;
   gap: 10px;
 }
 
 #front-image {
-  width: 50%;
+  width: 48%;
   flex-shrink: 0;
   object-fit: cover;
 }
@@ -72,3 +83,6 @@ main {
 .container-tekst h1 {
   font-size: 36px;
 }
+
+
+
