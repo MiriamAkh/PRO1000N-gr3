@@ -162,6 +162,7 @@ let footerIcons = [
 footerIcons.forEach(icon => {
   let a = document.createElement("a");
   a.href = icon.link;
+  a.target = "_blank";
   let img = document.createElement("img");
   img.src = icon.src;
   img.alt = icon.alt;
