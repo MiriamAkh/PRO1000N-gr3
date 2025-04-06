@@ -152,11 +152,11 @@ let footDivIcons = document.createElement("div");
 footDivIcons.classList.add("footer-icons");
 
 let footerIcons = [
-  {src: "images/fIcon1.png", alt: "Footer Icon", link: "https://www.vg.no"},
-  {src: "images/fIcon2.png", alt: "Footer Icon", link: "https://www.vg.no"},
-  {src: "images/fIcon3.png", alt: "Footer Icon", link: "https://www.vg.no"},
-  {src: "images/fIcon4.png", alt: "Footer Icon", link: "https://www.vg.no"},
-  {src: "images/fIcon5.png", alt: "Footer Icon", link: "https://www.vg.no"}
+  {src: "images/fIcon1.png", alt: "Footer Icon", link: "https://www.facebook.com"},
+  {src: "images/fIcon2.png", alt: "Footer Icon", link: "https://www.instagram.com"},
+  {src: "images/fIcon3.png", alt: "Footer Icon", link: "https://www.linkedin.com"},
+  {src: "images/fIcon4.png", alt: "Footer Icon", link: "https://www.x.com"},
+  {src: "images/fIcon5.png", alt: "Footer Icon", link: "https://www.youtube.com"}
 ]
 
 footerIcons.forEach(icon => {
