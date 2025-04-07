@@ -174,8 +174,8 @@ color: #1C321E;
   align-items: center;
   padding: 5vw; /* Marger i boksen */
   border-radius: 0px 20px 20px 0px;
-  border-right: 3px solid #C8C8C8;
-  border-left: 3px solid #C8C8C8;
+  border-right: none;
+  border-left: none;
   background: #E6E6E6;
 
 h2 {color: #1C321E;
