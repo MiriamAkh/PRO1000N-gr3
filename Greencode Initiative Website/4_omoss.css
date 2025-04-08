@@ -64,6 +64,8 @@ main {
 .misjon-bilde {
   flex: 0 0 auto;
   max-width: 300px;
+  float: left;
+  margin-right: 55px;
 }
 
 .container {
