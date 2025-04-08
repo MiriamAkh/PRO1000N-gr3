@@ -16,25 +16,18 @@ html, body {
 
 
 .text-box {
-  width: 36%; /* OBS FIKS HER */
-  height: 100%; /* OBS FIKS HER */
-  flex-shrink: 0;
-  padding: 17px;
-  box-sizing: border-box;
-  background: linear-gradient(171deg, #214127 38.88%, #CEEEC1 193.84%);
-  color: #FEFEFE;
-
   font-family: Rubik;
-  font-size: 20px;
+  font-size: 1.5vw;
   font-style: normal;
-  font-weight: 400;
-  line-height: 22px; /* 110% */
-
+  font-weight: normal;
+  line-height: 150%; /* 110% */
+  margin-left: 5vw;
   display: flex;
+  flex: 1;
   flex-direction: column;
   justify-content: center;
-  align-items: center;
-  text-align: center;
+  align-items: left;
+  text-align: left;
   gap: 10px;
 }
 
@@ -72,7 +65,7 @@ html, body {
 .box-container {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  gap: 30px; /* Mellomrom mellom bokser */
+  gap: 60px; /* Mellomrom mellom bokser */
   margin-top: 80px; /* Mellomrom over bokser */
   width: 100%;
   max-width: 1200px;
@@ -85,25 +78,25 @@ html, body {
   align-items: center;
   padding: 30px; /* Boksstørrelse */
   border-radius: 12px;
-border-top: 2px solid #253D27;
-border-bottom: 2px solid #253D27;
-background: #E6E6E6;
-box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+  border-top: 2px solid #253D27;
+  border-bottom: 2px solid #253D27;
+  background: #E6E6E6;
+  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
 
-h2 {color: #1C321E;
-font-family: Rubik;
-font-size: 36px;
-font-style: normal;
-font-weight: 500;
-line-height: normal;
-}
+  h2 {color: #1C321E;
+  font-family: Rubik;
+  font-size: 36px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+  }
 
-color: #1C321E;
-font-family: Rubik;
-font-size: 20px;
-font-style: normal;
-font-weight: 400;
-line-height: normal;
+  color: #1C321E;
+  font-family: Rubik;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
 
   text-decoration: none;
   border-radius: 15px; /* Rundede hjørner */
@@ -122,43 +115,32 @@ line-height: normal;
   box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
 }
 
-.icon-wrapper {
-  position: relative;
-  width: 60px;
-  height: 60px;
-  margin-right: 15px;
-  flex-shrink: 0;
+.header {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
 }
 
 .box-icon {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 60px;
-  height: 60px;
-  transition: opacity 0.3s ease;
-}
-
-.icon-default {
-  opacity: 1;
-}
-
-.icon-hover {
-  opacity: 0;
-}
-
-.clickable-box:hover .icon-default {
-  opacity: 0;
-}
-
-.clickable-box:hover .icon-hover {
-  opacity: 1;
+  width: 5vw;
+  height: 5vw;
+  margin-right: 10px;
+  transition: transform 0.3s;
 }
 
 .box-text {
   flex-grow: 1;
 }
 
+#box1:hover #icon1 {
+  transform: scale(1.1);
+  content: url('images/verktøykasseikon_hover.png');
+}
+
+#box2:hover #icon2 {
+  transform: scale(1.1);
+  content: url('images/bærekraftkon_hover.png');
+}
 
 
 /* "Responsive Styling" -chatgpt ¯\_(ツ)_/¯ */

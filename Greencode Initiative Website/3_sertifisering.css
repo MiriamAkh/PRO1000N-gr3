@@ -108,5 +108,10 @@ main {
   text-decoration: none;
 }
 
+.button:hover {
+  background-color: #2f6b3e; 
+  transform: translateY(+2px); 
+  box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15);
+}
 
 

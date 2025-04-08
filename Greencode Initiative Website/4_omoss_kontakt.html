@@ -5,40 +5,79 @@
 <html lang="no">
 
 <head>
-
     <meta charset="UTF-8">
     <title>Kontakt | Greencode Initiative</title>
 
     <!-- Eventuelle CSS stylesheets links her-->
-    <link rel="stylesheet" href="4_omoss.css"> <!-- CSS stylesheets link--> 
+    <link rel="stylesheet" href="3_sertifisering.css"> <!-- CSS stylesheets link-->  
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Aner ikke hva denne gjør men gpt ville legge den til:) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com"> <!--Linkz til Rubik font family-->
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap" rel="stylesheet">
 </head>
 
 
 <body>
-
-    <!--Topptekst/overskrift-->
     <header>
         <!--Tom navbar som fylles med innhold fra JavaScript-->
         <nav id="navbar"></nav> 
     </header>
 
     <div id="banner">
-        <h1>GIW overskrift hvis vi vil ha</h1>
+        <div id="banner-container">
+            <div id="banner-tekst">
+                <h1>Kontaktskjema</h1>
+                <p>
+                    Her kan du sende oss en melding eller stille spørsmål.
+                </p>
+            </div>
+        </div>       
     </div>
 
     <!--Hovedinnhold på nettsiden-->
     <main>
+        <div class="container">
+            <div class="container-tekst">
+                <h1>Kontaktskjema GreenCode Initiative</h1>
+                <form id="kontakt-form" action="https://formsubmit.co/273970@usn.no" method="POST">
+                    <label>Ditt navn *<br></label>
+                    <input type="text" style="width:50%;" name="navn" required
+                        oninvalid="this.setCustomValidity('Fyll inn navn eller navn på bedrift.')"
+                        oninput="this.setCustomValidity('')"><br><br>
+                    
+                    
+                    <label>Epost vi kan nå deg på *</label><br>
+                    <textarea style="width: 50%;" name="Epost" required
+                        oninvalid="this.setCustomValidity('Fyll inn epost.')"
+                        oninput="this.setCustomValidity('')"></textarea><br><br>
 
-        <p> Underside 2 kan for eksempel være verktøykasse</p>
-
-        <p>Typisk ligger det en del sections her</p>
-
-
-    </main>
+                    <label>Ditt spørsmål/din henvendelse</label><br>
+                    <textarea rows="4" style="width: 50%; height: 128px;" name="Din hendvendelse"></textarea><br><br>
+                </form>
+                <p>Felter merket med * er påkrevde</p>               
+            </div>
+            <div id="container-button">
+                <a href="#" onclick="sendInn()" class="button">SEND INN SØKNAD</a>
+            </div>
+        </div>
 
     <!--Tekst langs bunnen-->
     <footer id="footer">
     </footer>
+
+    <script>
+        function sendInn() {
+            event.preventDefault();
+            const form = document.getElementById('kontakt-form');
+            if (form.checkValidity()) {
+                form.submit();
+            } else {
+                form.reportValidity();  
+            }
+        }
+
+            
+    </script>
 
     <script src="nav_footer.js"></script>
 
