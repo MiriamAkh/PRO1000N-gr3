@@ -40,19 +40,20 @@
             <div class="container-tekst">
                 <h1>Kontaktskjema GreenCode Initiative</h1>
                 <form id="kontakt-form" action="https://formsubmit.co/273970@usn.no" method="POST">
-                    <label>Ditt navn *<br></label>
+                    <label>Ditt navn / Navn på bedrift *<br></label>
                     <input type="text" style="width:50%;" name="navn" required
                         oninvalid="this.setCustomValidity('Fyll inn navn eller navn på bedrift.')"
                         oninput="this.setCustomValidity('')"><br><br>
-                    
-                    
+                                       
                     <label>Epost vi kan nå deg på *</label><br>
-                    <textarea style="width: 50%;" name="Epost" required
+                    <input type="text" style="width: 50%;" name="Epost" required
                         oninvalid="this.setCustomValidity('Fyll inn epost.')"
-                        oninput="this.setCustomValidity('')"></textarea><br><br>
+                        oninput="this.setCustomValidity('')"><br><br>
 
-                    <label>Ditt spørsmål/din henvendelse</label><br>
-                    <textarea rows="4" style="width: 50%; height: 128px;" name="Din hendvendelse"></textarea><br><br>
+                    <label>Ditt spørsmål/din henvendelse *</label><br>
+                    <textarea rows="8" style="width: 100%; " name="Hendvendelse" required
+                        oninvalid="this.setCustomValidity('Fyll inn henvendelse.')"
+                        oninput="this.setCustomValidity('')"></textarea><br><br>
                 </form>
                 <p>Felter merket med * er påkrevde</p>               
             </div>
