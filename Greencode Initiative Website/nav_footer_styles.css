@@ -97,7 +97,7 @@ nav {
 
 /* Hover-effekt på hvert menypunkt i nedtrekksmenyen */
 .nivå2 li a:hover {
-  background: linear-gradient(0deg, #000F02 0%, #325438 100%);
+  background: linear-gradient(to bottom, #325438 0%, #000F02 50%, #325438 100%);
   border-top-left-radius: 0;
   border-top-right-radius: 0;
 }
@@ -257,7 +257,7 @@ nav {
   }
 
   .nivå2 li a:hover {
-    background: linear-gradient(0deg, #000F02 0%, #325438 100%);
+    background: linear-gradient(to bottom, #54895E 0%, #000F02 50%, #54895E 100%);
     border-radius: 18px;
   }
 }

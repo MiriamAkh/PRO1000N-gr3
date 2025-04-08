@@ -1,10 +1,24 @@
 // Lager en Favicon
-var faviconLink = document.createElement('link');
+let faviconLink = document.createElement('link');
 faviconLink.rel = 'icon';
 faviconLink.type = 'image/x-icon'; // Change to "image/x-icon" if using a .ico file
 faviconLink.href = 'images/favicon.ico'; // Update the path to your favicon
 document.head.appendChild(faviconLink);
 
+//Legger inn ikke-standard fonter
+
+let styleSheets = [
+  {href: "https://fonts.googleapis.com/css?family=Hammersmith One"},
+  {href: "https://fonts.googleapis.com/css?family=Roboto"},
+  {href: "nav_footer_styles.css"}
+];
+
+styleSheets.forEach(style => {
+  let link = document.createElement('link');
+  link.href = style.href;
+  link.rel = "stylesheet";
+  document.head.appendChild(link);
+});
 
 //Navbar
 
