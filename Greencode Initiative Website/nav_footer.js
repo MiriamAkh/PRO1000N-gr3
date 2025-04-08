@@ -148,7 +148,7 @@ let footLenker = [
   {tekst: `<img src="images/footerpil.png" alt="Arrow Icon" class="footer-icon"><span>Til toppen</span>`, link: "#", class: "top-link"},
   {tekst: "Kontakt", link: "4_omoss_kontakt.html", class: "footer-link"},
   {tekst: "FAQ", link: "4_omoss_FAQ.html", class: "footer-link"},
-  {tekst: "Kildehenvisninger", link: "https://www.vg.no", class: "footer-link"}
+  {tekst: "Kildehenvisninger", link: "0_kilder.html", class: "footer-link"}
 ];
 
 footLenker.forEach(knapp => {
