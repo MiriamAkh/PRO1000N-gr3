@@ -62,10 +62,12 @@ main {
 }
 
 .misjon-bilde {
-  flex: 0 0 auto;
-  max-width: 300px;
+  object-fit: contain;
+  max-width: 35%;
+  height: auto;
   float: left;
   margin-right: 55px;
+
 }
 
 .container {
@@ -80,11 +82,16 @@ main {
 }
 
 .container-tekst {
+  clear: both;
   width: 60vw;
   font-family: Rubik;
   color: #232323;
   font-size: 18px;
   margin:auto;
+}
+
+#picture-text {
+  display: block;
 }
 
 .container-tekst h1 {
