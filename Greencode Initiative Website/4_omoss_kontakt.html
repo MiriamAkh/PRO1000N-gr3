@@ -53,9 +53,20 @@
                     <label>Ditt spørsmål/din henvendelse *</label><br>
                     <textarea rows="8" style="width: 100%; " name="Hendvendelse" required
                         oninvalid="this.setCustomValidity('Fyll inn henvendelse.')"
-                        oninput="this.setCustomValidity('')"></textarea><br><br>
-                </form>
-                <p>Felter merket med * er påkrevde</p>               
+                        oninput="this.setCustomValidity('')"></textarea><br>
+
+                        <p>Felter merket med * er påkrevde</p>  
+
+                        <label>
+                            <input type="checkbox" required>
+                            Jeg samtykker til at mine data lagres og behandles i henhold til personvernerklæringen.
+                          </label><br><br>
+                        
+                          <p style="font-size: 0.9em;">
+                            Når du sender inn skjemaet, godtar du at vi lagrer og bruker dine opplysninger for å kunne svare på din henvendelse.
+                            <a href="0_personvern.html" target="_blank">Les vår personvernerklæring</a>.
+                          </p>
+                </form>             
             </div>
             <div id="container-button">
                 <a href="#" onclick="sendInn()" class="button">SEND INN SØKNAD</a>
