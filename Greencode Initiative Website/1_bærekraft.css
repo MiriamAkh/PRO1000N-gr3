@@ -15,6 +15,8 @@
       display: flex;  
       padding-top: 20px;
       padding-bottom: 20px;
+
+      position: relative;
     }
     
     #banner-tekst {
@@ -213,3 +215,23 @@
       padding-right: 65px;
       padding-left: 65px;
     }
+
+
+    /* ARTIKLER */
+
+  #tilbake {
+    position: absolute; /* Få tilbakeknapp til å ligge et stykke t.v. fant ingen bedre løsning */
+    left: -130px; 
+
+    width: 55px;
+    height: 55px;
+    flex-shrink: 0;
+    padding-top: 20px;
+    margin-right: 20px;
+  }
+   
+    #tilbake:hover #icon1 {
+      transform: scale(1.0);
+      content: url('images/tilbake_pil_hover.png');
+    }
+
