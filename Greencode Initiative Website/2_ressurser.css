@@ -41,7 +41,7 @@
 }
 
 .tilbake:hover{
-  transform: scale(1.2);
+  content: url('images/tilbake_pil_hover.png');
 }
 
 
