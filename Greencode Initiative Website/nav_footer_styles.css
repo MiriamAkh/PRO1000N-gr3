@@ -15,6 +15,7 @@ nav {
     top: 0;
     left: 0;
     height: var(--navbar-hoyde);
+    z-index: 100;
 }
 
 .logo {
@@ -53,6 +54,7 @@ nav {
     margin: 0;
     cursor: pointer;
     border-radius: 18px;
+    line-height: 24px;
 }
 
 .nivå1 {
@@ -93,6 +95,7 @@ nav {
   color: var(--navnbar-bakgrunnsfarge);          /* Hvit tekst */
   display: block;
   text-decoration: none;
+  
 }
 
 /* Hover-effekt på hvert menypunkt i nedtrekksmenyen */
