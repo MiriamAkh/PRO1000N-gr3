@@ -33,15 +33,16 @@
             <p>Du kan redusere karbonavtrykket og ta hensyn til klimaet - uten at det går på bekostning av ytelsen.</p>
             <p>GreenCode Initiative tilbyr en rekke <b>gratis metoder og verktøy</b> som hjelper din bedrift med å implementere grønn kode.</p>
             
-            <button class="scroll-button" onclick="scrollDown()">
-                <span><b>Kom i gang</b></span>
-                <img src="images/scrolleikon.svg" alt="Scroll Icon" class="button-icon">
+            <button class="scroll-button" id="box0" onclick="scrollDown()">          
+                <img src="images/komigang.svg" alt="Scrolleikon" id="icon0">
             </button>
         </div>
         
         <!-- Forsidebilde -->
         <img src="images/forsidebilde.png" alt="En pc med grønn vegetasjon" class="image" id="front-image">
     </div>
+
+    <section id="komiganginnhold">
         
     <div class="box-container">
         <a href="2_ressurser.html" class="clickable-box" id="box1">
@@ -79,7 +80,7 @@
     </a>
 </div>
 
-
+</section>
 
     </main>
 
@@ -89,9 +90,18 @@
 
     <!-- Scroller ned med "kom i gang" og "til toppen"-knapper -->
     <script>
-        function scrollDown() {
-            window.scrollBy({ top: 500, behavior: 'smooth' });
-        }
+       function scrollDown() {
+    const target = document.getElementById('komiganginnhold');
+    const offset = 120; // Endre denne for å justere mellomrom på toppen av scroll
+
+    const targetPosition = target.getBoundingClientRect().top + window.pageYOffset;
+    const scrollToPosition = targetPosition - offset;
+
+    window.scrollTo({
+      top: scrollToPosition,
+      behavior: 'smooth'
+    });
+  }
         function scrollToTop() {
             window.scrollTo({ top: 0, behavior: 'smooth' });
         }

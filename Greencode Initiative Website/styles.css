@@ -132,6 +132,15 @@ html, body {
   flex-grow: 1;
 }
 
+#box0 {
+  align-self: flex-end;
+}
+
+#box0:hover #icon0 {
+  transform: scale(1.1);
+  content: url('images/komigang_hover.svg');
+}
+
 #box1:hover #icon1 {
   transform: scale(1.1);
   content: url('images/verktøykasseikon_hover.png');
@@ -141,6 +150,7 @@ html, body {
   transform: scale(1.1);
   content: url('images/bærekraftkon_hover.png');
 }
+
 
 
 /* "Responsive Styling" -chatgpt ¯\_(ツ)_/¯ */
