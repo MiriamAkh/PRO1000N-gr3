@@ -124,26 +124,7 @@
     }
     
     
-    @media (max-width: 768px) {
-      .clickable-box {
-        flex-direction: column;
-        align-items: flex-start;
-        height: auto; /* Remove fixed height on small screens */
-      }
-    
-      .box-image {
-        width: 100%;
-        height: auto;
-      }
-    
-      h2 {
-        font-size: 28px;
-      }
-    
-      .box-text {
-        width: 100%;
-      }
-    }
+   
 
 /* CASE-STUDIE */
 
@@ -163,7 +144,7 @@
       padding-top: 60px;
       padding-bottom: 20px;
 
-      
+      align-items: center;
     }
 
     main {
@@ -173,7 +154,9 @@
     }
 
     .casestd-text {
-      width: 1050px; /* Yikes, skalering må legges til */
+      width: 100%;
+      max-width: 1050px;
+      box-sizing: border-box; /* makes padding not add extra width */
       height: 134px;
       flex-shrink: 0;
       flex: 64;
@@ -185,10 +168,14 @@
 
       padding-right: 65px;
       padding-left: 65px;
+
+      margin: 0 auto; /* centers the content inside the flex box */
     }
 
     .casestd-brødtext {
-      width: 1080px; /* Yikes, skalering må legges til */
+      width: 100%;
+      max-width: 1080px;
+      box-sizing: border-box;
       height: 134px;
       flex-shrink: 0;
       flex: 64;
@@ -199,6 +186,8 @@
       line-height: 26px; /* 144.444% - MRA: ???? Denne kommentaren kommer fra Figma, aner ikke hva greia er lol*/
       padding-right: 65px;
       padding-left: 65px;
+
+      margin: 0 auto; /* centers the content inside the flex box */
     }    
 
     #rjjpadding {
@@ -208,6 +197,10 @@
       padding-left: 30px;
       padding-bottom: 34px;
       padding-right: 60px;
+
+      box-sizing: border-box;
+  max-width: 100%;
+  height: auto; /* let it scale naturally */
     }
 
     #h2padding {
@@ -234,3 +227,47 @@
       content: url('images/tilbake_pil_hover.png');
     }
 
+    .no-hover-underline:hover {
+      text-decoration: none !important;
+    }
+
+ @media (max-width: 768px) {
+      .clickable-box {
+        flex-direction: column;
+        align-items: flex-start;
+        height: auto; /* Remove fixed height on small screens */
+      }
+    
+      .box-image {
+        width: 100%;
+        height: auto;
+      }
+    
+      h2 {
+        font-size: 28px;
+      }
+    
+      .box-text {
+        width: 100%;
+      }
+
+      .casestd-text,
+      .casestd-brødtext,
+      #h2padding {
+        padding-left: 20px;
+        padding-right: 20px;
+        font-size: 16px;
+      }
+    
+      #rjjpadding {
+        width: 100%;
+        height: auto;
+        padding: 20px 0;
+      }
+    
+      .linjetekst {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+  }
