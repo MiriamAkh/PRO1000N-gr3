@@ -249,11 +249,33 @@
 
     #overskrifter-artikler {
       font-size: 24px;
+      margin-bottom: 0px; /* prevents gap below headline */
+      padding-bottom: 20px;
     }
 
-    #boldoverskrifter-artikler {
+    .boldoverskrifter-artikler {
       font-weight: 550;
+      margin-bottom: 0; /* Remove space below the heading */
     }
+
+    .boldoverskrifter-artikler + p {
+      margin-top: 0; /* Remove space above the paragraph */
+    }
+
+    .image-wrapper {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 100%;
+      margin: 40px 0; /* optional spacing */
+    }
+    
+    .image-wrapper img {
+      max-width: 800px;
+  width: 100%;
+  height: auto;
+  border-radius: 20px;
+    }   
 
  @media (max-width: 768px) {
       .clickable-box {
