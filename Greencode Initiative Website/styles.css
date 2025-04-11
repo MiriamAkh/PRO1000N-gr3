@@ -137,8 +137,8 @@ html, body {
 }
 
 #box0:hover #icon0 {
-  transform: scale(1.1);
-  content: url('images/komigang_hover.svg');
+  transform: scale(1.02);
+  content: url('images/komigang_hover2.svg');
 }
 
 #box1:hover #icon1 {
