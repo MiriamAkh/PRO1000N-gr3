@@ -89,7 +89,7 @@ main {
   margin: 0;
 }
 .container-tekst h2 {
-  font-size: clamp(1.3rem, 3vw, 1.8rem); /* Bruk clamp for responsiv font-størrelse */
+  font-size: clamp(1.3rem, 3vw, 2rem); /* Bruk clamp for responsiv font-størrelse */
   margin: 0;
 }
 
