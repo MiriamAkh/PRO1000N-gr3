@@ -28,18 +28,20 @@
         <!-- Her er tekstboks og forsidebilde i samme boks -->
         <div id="banner">
             <!-- Tekstboksen med grønn bakgrunn -->
-            <div>
-                <a href="2_ressurser.html">
-                <img src="images/tilbake_pil.png" alt="Tilbake" class="tilbake">
-                </a>
+            <div id="banner-container">    
+                <div id="tilbake-knapp">
+                    <a href="2_ressurser.html"><img src="images/tilbake_pil.png" alt="Tilbake" id="tilbake"></a>
+                </div>
+                <div id="banner-tekst">
+                    <h1>Introduksjon til grønn programmering </h1>
+                    <p>Dette er en grunnleggende kursdel som gir en oversikt over fordelene med grønn kode, 
+                        dens innvirkning på energieffektivitet, og generelle retningslinjer. 
+                        Her vil du lære hvorfor bevisste kodevalg har stor betydning for miljøet,                          og hvordan du kan ta de første stegene mot en mer bærekraftig utviklingspraksis.</p>
+                </div>
+                <div id="banner-bilde">
+                    <img src="images/programmerer.png" alt="En ung programmerer" id="kodegutt">       
+                </div>
             </div>
-            <div class="text-box">
-                <h1>Introduksjon til grønn programmering </h1>
-                <p>Dette er en grunnleggende kursdel som gir en oversikt over fordelene med grønn kode, 
-                    dens innvirkning på energieffektivitet, og generelle retningslinjer. 
-                    Her vil du lære hvorfor bevisste kodevalg har stor betydning for miljøet,                          og hvordan du kan ta de første stegene mot en mer bærekraftig utviklingspraksis.</p>
-            </div>
-                <img src="images/programmerer.png" alt="En ung programmerer" class="topp-bilde">       
         </div>
 
         <!-- Tekstbokser med diverse innhold -->
@@ -48,12 +50,14 @@
                 <h2>Eksternt innhold</h2>     
                 <p>Youtube video av Kent Inge Fagerland Simonsen på NDC Oslo 2024.</p>
                 <a href="https://www.youtube.com/watch?v=1uME7N3UqdY" target="_blank">Green Code Experiment</a><br>
-                <iframe width="560" height="315" 
-                    src="https://www.youtube.com/embed/1uME7N3UqdY" 
-                    frameborder="0" 
-                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
-                    allowfullscreen>
-                </iframe>
+                <div class="video-container">
+                    <iframe  
+                        src="https://www.youtube.com/embed/1uME7N3UqdY" 
+                        frameborder="0" 
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                        allowfullscreen>
+                    </iframe>
+                </div>
             </div>
         </div>
 

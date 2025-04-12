@@ -1,11 +1,13 @@
-/* --- Main --- */
 
-body {
+
+html, body {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
   overflow-x: hidden;
 }
+
+/* --- Banner --- */
 
 #banner {
   display: flex;
@@ -15,56 +17,69 @@ body {
   left: 0;
   background: linear-gradient(171deg, #214127 38.88%, #CEEEC1 193.84%);
   color: white;
-  padding: 0;
-}
-
-.text-box {
-  font-family: Rubik;
-  font-size: 1.5vw;
-  font-style: normal;
-  font-weight: normal;
-  line-height: 150%; /* 110% */
-  margin-left: 5vw;
-  display: flex;
-  flex: 1;
-  flex-direction: column;
   justify-content: center;
-  align-items: left;
-  text-align: left;
-  gap: 10px;
 }
 
-.text-box h1 {
-  font-size: clamp(1.5rem, 4vw, 3rem); /* Bruk clamp for responsiv font-størrelse */
-    margin: 0;
+#banner-container {
+  width: 60vw;
+  display: flex;  
+  padding-top: 20px;
+  padding-bottom: 20px;
 }
 
-.tilbake {
+#banner-tekst {
+  flex: 75;
+  color:#FEFEFE;
+  font-family: Rubik;
+  font-size: 20px;
+  margin-top: 2vw;
+}
+
+#banner-tekst h1 {
+  font-size: clamp(1.7rem, 4vw, 3rem); /* Bruk clamp for responsiv font-størrelse */
+  margin: 0;
+}
+
+#banner-bilde {
+  flex: 20;
+  display: fixed;
+  justify-content: right;
+}
+
+#kodegutt {
+  width:95%;
+  min-width: 120px;
+  object-fit: contain;
+}
+
+#tilbake-knapp {
+  display: flex;
+  justify-content: left;
+  margin-top: 5vw;
+  margin-right: 2vw;
+}
+
+#tilbake {
   color: none;
   border: none;
   padding: none;
   cursor: pointer;
-  width: 5vw;  /* Juster bredde etter behov */
+  width: 3vw;  /* Juster bredde etter behov */
   background-image: none;
   background-size: contain; /* Sikrer at bildet passer inn i ikonet */
   background-repeat: no-repeat; /* Hindrer gjentagelse av bildet */
   background-position: center; /* Sentraliserer bildet i ikonet */
-  margin-left: 5vw;
-  margin-top: 5vw;
   transition: background-image 0.3s;
 }
 
-.tilbake:hover{
+#tilbake:hover{
   content: url('images/tilbake_pil_hover.png');
 }
 
 
-.topp-bilde {
-  width: 25vw;
-  max-height: 25vw;
-}
 
-/* Boksene! */
+/* --- Main --- */
+
 .box-container {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
@@ -73,6 +88,8 @@ body {
   margin: 60px auto;
   padding: 0;
 }
+
+/* Boksene! */
 
 .clickable-box {
   display: flex;
@@ -88,7 +105,8 @@ body {
 
 h2 {color: #1C321E;
   font-family: Rubik;
-  font-size: 36px;
+  font-size: clamp(1.3rem, 3vw, 2rem); /* Bruk clamp for responsiv font-størrelse */
+  margin: 0;
   font-style: normal;
   font-weight: 500;
   line-height: normal;
@@ -177,13 +195,17 @@ color: #1C321E;
 
 /* Vanlig tekst eller innhold */
 .innhold-container {
-  display: grid;
-  gap: 60px; /* Mellomrom mellom bokser */
-  margin-top: 20px; /* Ikke mellomrom til grønn topp */
-  width: 90vw; /*holder boksene innenfor horisontal scroll for nå */
-  margin-left: 60px;
-  margin-right: 60px;
+  top:0;
+  display:block;
+  width: 60vw;
+  background-color: #F1F1F1;
+  border-radius: 18px;
+  margin:auto;
+  margin-top: 60px;
+
+  
 }
+
 .innhold {
   vertical-align: top;
   align-items: center;
@@ -211,6 +233,10 @@ color: #1C321E;
   text-decoration: none;
   border-radius: 15px; /* Rundede hjørner */
   transition: background-color 0.3s, color 0.3s;
+}
+
+.innhold-container iframe {
+  width: 90%;
 }
 
 /* "Responsive Styling" -chatgpt ¯\_(ツ)_/¯ */

@@ -28,19 +28,21 @@
         <!-- Her er tekstboks og forsidebilde i samme boks -->
         <div id="banner">
             <!-- Tekstboksen med grønn bakgrunn -->
-            <div>
-                <a href="2_ressurser.html">
-                <img src="images/tilbake_pil.png" alt="Tilbake" class="tilbake">
-            </a>
-            </div>
-            <div class="text-box">
-                <h1>Skrive og teste grønn kode</h1>
-                <p>Presenterer hvordan du kan anvende grønne prinsipper i bygge- og testfasen, 
+            <div id="banner-container">    
+                <div id="tilbake-knapp">
+                    <a href="2_ressurser.html"><img src="images/tilbake_pil.png" alt="Tilbake" id="tilbake"></a>
+                </div>
+                <div id="banner-tekst">
+                    <h1>Skrive og teste grønn kode</h1>
+                    <p>Presenterer hvordan du kan anvende grønne prinsipper i bygge- og testfasen, 
                     inkludert CI/CD-pipelines og automatisert testing. 
                     Få tips til hvordan du kan unngå ressurskrevende prosesser og 
                     likevel levere robust, stabil og bærekraftig programvare.</p>
+                </div>
+                <div id="banner-bilde">
+                    <img src="images/programmerer.png" alt="En ung programmerer" id="kodegutt">       
+                </div>
             </div>
-                <img src="images/programmerer.png" alt="En ung programmerer" class="topp-bilde">       
         </div>
     
         <!-- Tekstbokser med diverse innhold -->
