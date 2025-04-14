@@ -90,12 +90,22 @@ html, body {
       display: block; /* Prevents inline image spacing */
     }
 
+    .høyrebilde {
+      border-top-right-radius: 12px;
+      border-bottom-right-radius: 12px;
+    }
+
+    .venstrebilde {
+      border-top-left-radius: 12px;
+      border-bottom-left-radius: 12px;
+    }
+
     .box-imageWide {  /* Til bildet på en av de nederste boksene som er litt bredere */
       width: 460px;
       height: 325px;
       object-fit: cover;
       flex-shrink: 0;
-      border-radius: 0;
+  
       margin: 0;
       padding: 0;
       display: block; /* Prevents inline image spacing */
