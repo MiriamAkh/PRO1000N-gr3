@@ -26,22 +26,22 @@
         
         <!-- Container for tekstboks og forsidebilde -->
     <div id="banner">
-        <!-- Tekstboksen, med knapp -->
-        <div class="text-box">
-            <h1>Hva er GreenCode?</h1>
-            <p>Grønn kode handler om <b>bærekraftig programvareutvikling</b> med energisparende algoritmer og optimal ressursbruk.</p>
-            <p>Du kan redusere karbonavtrykket og ta hensyn til klimaet - uten at det går på bekostning av ytelsen.</p>
-            <p>GreenCode Initiative tilbyr en rekke <b>gratis metoder og verktøy</b> som hjelper din bedrift med å implementere grønn kode.</p>
-            
-            <button class="scroll-button" id="box0" onclick="scrollDown()">          
-                <img src="images/komigang.svg" alt="Scrolleikon" id="icon0">
-            </button>
+        <div id="banner-container">
+            <!-- Tekstboksen, med knapp -->
+            <div id="banner-tekst">
+                <h1>Hva er GreenCode?</h1>
+                <p>Grønn kode handler om <b>bærekraftig programvareutvikling</b> med energisparende algoritmer og optimal ressursbruk.</p>
+                <p>Du kan redusere karbonavtrykket og ta hensyn til klimaet - uten at det går på bekostning av ytelsen.</p>
+                <p>GreenCode Initiative tilbyr en rekke <b>gratis metoder og verktøy</b> som hjelper din bedrift med å implementere grønn kode.</p>
+                <!-- Knapp -->
+                <button class="scroll-button" id="box0" onclick="scrollDown()">          
+                    <img src="images/komigang.svg" alt="Scrolleikon" id="icon0">
+                </button>
+            </div>
+            <!-- Forsidebilde -->
+            <img src="images/forsidebilde.png" alt="En pc med grønn vegetasjon" class="image" id="front-image">
         </div>
-        
-        <!-- Forsidebilde -->
-        <img src="images/forsidebilde.png" alt="En pc med grønn vegetasjon" class="image" id="front-image">
     </div>
-
     <section id="komiganginnhold">
         
     <div class="box-container">
@@ -68,13 +68,19 @@
 
     <a href="1_bærekraft_casestudie.html" class="clickable-box">
         <div class="box-text">
-            <h2>RJJ Software: En suksesshistorie</h2>
+            <div class="header">
+                <img src="images/RJJSoftware.png" alt="Icon 3" class="box-icon2">
+                <h2>RJJ Software: En suksesshistorie</h2>
+            </div>
             <p>Les om hvordan RJJ Software har gått frem for å lykkes med å gjennomføre grep for miljøvern og økt bærekraft</p>
         </div>
     </a>
-    <a href="3_sertifisering_info.html" class="clickable-box">
+    <a href="3_sertifisering_info.html" class="clickable-box" id="box4">
         <div class="box-text">
-            <h2>Kunnskapsbygging med sertifisering</h2>
+            <div class="header">
+                <img src="images/certified.png" alt="Icon 4" class="box-icon" id="icon4">
+                <h2>Kunnskapsbygging med sertifisering</h2>
+            </div>
             <p>Kurs og sertifiseringer kan bidra til å styrke din bedrifts posisjon i markedet. GCI hjelper deg dit</p>
         </div>
     </a>

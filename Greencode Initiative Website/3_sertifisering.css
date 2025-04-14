@@ -20,7 +20,7 @@ html, body {
 }
 
 #banner-container {
-  width: 60vw;
+  width: 70vw;
   display: flex;  
   padding-top: 20px;
   padding-bottom: 20px;
@@ -31,7 +31,7 @@ html, body {
   flex: 64;
   color:#FEFEFE;
   font-family: Rubik;
-  font-size: 20px;
+  font-size: clamp(1rem, 1.3vw, 1.3rem); /* Bruk clamp for responsiv font-størrelse */
 }
 
 #banner-tekst h1 {
@@ -42,13 +42,14 @@ html, body {
 #banner-bilde {
   flex: 36;
   display: flex;
-  justify-content: right;
+  justify-content: center;
   align-items: center; /* Vertikalt sentrerer bildet innenfor banner-bilde */
 }
 
 #emblem {
   width:93%;
   min-width: 100px;
+  max-height: 250px;
   object-fit: contain;
 }
 
@@ -69,6 +70,20 @@ main {
   padding-bottom: 36px;
 }
 
+.container-skjema {
+  top:0;
+  display:block;
+  width: 70%;
+  background-color: #F1F1F1;
+  border-radius: 18px;
+  margin:auto;
+  margin-top: 60px;
+  padding-bottom: 36px;
+  border-left: 2px solid #253D27;
+  border-right: 2px solid #253D27;
+}
+
+
 .container-tekst {
   width: 60vw;
   font-family: Rubik;
@@ -77,6 +92,7 @@ main {
   margin:auto;
   overflow-wrap: break-word; /* ✅ Breaks long words instead of overflowing */
   word-break: break-word;   /* ✅ Additional safety */
+  padding-top: 60px;
 }
 
 .container-tekst h1,h2,h3,h4 {

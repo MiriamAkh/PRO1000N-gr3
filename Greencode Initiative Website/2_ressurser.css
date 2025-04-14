@@ -1,11 +1,10 @@
-
-
 html, body {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
   overflow-x: hidden;
 }
+
 
 /* --- Banner --- */
 
@@ -20,20 +19,32 @@ html, body {
   justify-content: center;
 }
 
-#banner-container {
-  width: 60vw;
+#banner-container-main {
+  width: 70vw;
   display: flex;  
   padding-top: 20px;
   padding-bottom: 20px;
+  padding-left: 10vw;
   align-items: center; /* Vertikalt sentrerer innholdet i containeren */
+  justify-content: center;
+}
+
+#banner-container {
+  width: 80vw;
+  display: flex;  
+  padding-top: 20px;
+  padding-bottom: 20px;
+  padding-left: 10vw;
+  align-items: top; /* Vertikalt sentrerer innholdet i containeren */
+  justify-content: left;
 }
 
 #banner-tekst {
-  flex: 75;
+  flex: 64;
   color:#FEFEFE;
   font-family: Rubik;
-  font-size: 20px;
-  margin-top: 2vw;
+  font-size: clamp(1rem, 1.3vw, 1.3rem); /* Bruk clamp for responsiv font-størrelse */
+  padding-top: 20px;
 }
 
 #banner-tekst h1 {
@@ -42,24 +53,26 @@ html, body {
 }
 
 #banner-bilde {
-  flex: 20;
-  display: fixed;
-  justify-content: right;
-  align-items: center; /* Vertikalt sentrerer innholdet i containeren */
+  flex: 36;
+  display: flex;
+  justify-content: center;
+  align-items: left; /* Vertikalt sentrerer bildet innenfor banner-bilde */
 }
 
 #kodegutt {
-  width:95%;
-  min-width: 120px;
+  min-width: 100px;
+  max-height: 200px;
   object-fit: contain;
 }
+
+/* Verktøy-banner: tilbakeknapp */
 
 #tilbake-knapp {
   flex: 5;
   display: fixed;
   justify-content: left;
-  margin-right: 1vw;
-  align-items: center; /* Vertikalt sentrerer innholdet i containeren */
+  margin-right: 2vw;
+  padding-top: 20px;
 }
 
 #tilbake {
@@ -79,17 +92,18 @@ html, body {
   content: url('images/tilbake_pil_hover.png');
 }
 
-
-
 /* --- Main --- */
+
+main {
+  display: block;
+}
 
 .box-container {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   gap: 60px; /* Mellomrom mellom bokser */
-  max-width: 1200px; /*holder boksene innenfor horisontal scroll */
+  max-width: 75%; /*holder boksene innenfor horisontal scroll */
   margin: 60px auto;
-  padding: 0;
 }
 
 /* Boksene! */
@@ -98,7 +112,7 @@ html, body {
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 15px; /* Boksstørrelse */
+  padding: 30px; /* Boksstørrelse */
   border-radius: 12px;
   border-top: 2px solid #253D27;
   border-bottom: 2px solid #253D27;
@@ -264,6 +278,8 @@ color: #1C321E;
   height: 100%;
   border: 0;
 }
+
+
 
 /* "Responsive Styling" -chatgpt ¯\_(ツ)_/¯ */
 @media screen and (max-width: 768px) {
