@@ -21,9 +21,18 @@ html, body {
 
 #banner-container {
   display: flex;
-  gap: 2vw; /* Mellomrom mellom bokser */
-  width: 90%;
+  width: 80vw;
+  padding-top: 20px;
+  padding-bottom: 20px;
   display: flex;  
+  align-items: center; /* Vertikalt sentrerer innholdet i containeren */
+  justify-content: left;
+}
+
+#banner-container-hvemervi {
+  display: flex;
+  gap: 2vw; /* Mellomrom mellom tekst og bilde */
+  width: 90%; 
   align-items: center; /* Vertikalt sentrerer innholdet i containeren */
   justify-content: left;
 }
@@ -33,6 +42,7 @@ html, body {
   color:#FEFEFE;
   font-family: Rubik;
   font-size: clamp(1rem, 1.3vw, 1.3rem); /* Bruk clamp for responsiv font-størrelse */
+  max-width: 60vw;
 }
 
 #banner-tekst h1 {
