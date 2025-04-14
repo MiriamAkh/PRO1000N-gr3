@@ -240,8 +240,27 @@ nav {
     margin-left: 1%;
   }
 
+  .nivå2-punkt {
+    display: none;
+  }
+
+  .nivå1-punkt:hover .nivå2 {
+    border-top: none;
+  }
+
+  .nivå1-punkt:hover .pil {
+    transform: none;
+  }
+
+
+  .nivå1-punkt:has(> .nivå2.aktiv) .pil {
+    transform: rotate(180deg);
+    transition: transform 0.3s;
+  }
+
+
   .nivå1 > li {
-    display: block; /*Viser menypunkter ved siden av hverandre */
+    display: block; 
     position: relative;    /* Viktig for absolutte posisjonering av dropdown */     
   }
 
@@ -250,14 +269,18 @@ nav {
   }
 
   /* Plassering av første nivå undermeny (for eksempel under "Tjenester") */
-  .nivå1-punkt:hover > .nivå2 {
+  .nivå2.aktiv {
     display: block;
-    top: 0;
-    left: 10vw;
-    z-index: 2;
+    position: relative;
     border-radius: 18px;
     background-color: #54895E;
   }
+
+  .nivå2.aktiv > li {
+    display: block;
+    position: relative;
+  }
+
 
   .nivå2 li a:hover {
     background: linear-gradient(to bottom, #54895E 0%, #000F02 50%, #54895E 100%);

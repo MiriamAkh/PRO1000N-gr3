@@ -55,6 +55,7 @@ function createButtonNedtrekk(knappTekst, liste) {
   p.classList.add("nedtrekk-knapp")
   li1.appendChild(p);
   
+  
   //Lager nedtrekksmenyen
   let ul2 = document.createElement("ul");
   ul2.classList.add("nivå2");
@@ -66,9 +67,11 @@ function createButtonNedtrekk(knappTekst, liste) {
     a.innerHTML = knapp.tekst
     a.classList.add("nav-knapp")
     li2.appendChild(a)
-    ul2.appendChild(li2)
-    
+    ul2.appendChild(li2)  
   })
+  li1.addEventListener("click", function() {
+    ul2.classList.toggle("aktiv");
+  });
   li1.appendChild(ul2);
   ul1.appendChild(li1);
   navbar.appendChild(ul1);
