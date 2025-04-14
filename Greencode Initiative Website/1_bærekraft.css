@@ -160,16 +160,18 @@ html, body {
 
       display: flex;
       flex-direction: column;
-      width: 100%;
-      top: 0;
-      left: 0;
       justify-content: center;
-
-      width: 68vw; 
-      padding-top: 60px;
-      padding-bottom: 20px;
-
       align-items: center;
+
+      width: 100%;
+  max-width: 60vw;; /* 👈 Limit width on large screens */
+  padding-top: 60px;
+  padding-bottom: 20px;
+
+  padding-left: 60px; /* sdjkgfdhkjgf */
+  padding-right: 60px;
+
+  margin: 0 auto; /* 👈 Center the box itself */
     }
 
     main {
@@ -180,69 +182,57 @@ html, body {
 
     .casestd-text {
       width: 100%;
-      max-width: 1050px;
+      max-width: 100%;
       box-sizing: border-box; /* makes padding not add extra width */
-      height: 134px;
-      flex-shrink: 0;
-      flex: 64;
+    
       color: #232323;
       font-family: Rubik;
       font-size: 18px;
       font-weight: 400;
       line-height: 26px; /* 144.444% */
 
-      padding-right: 65px;
-      padding-left: 65px;
-
       margin: 0 auto; /* centers the content inside the flex box */
     }
 
     .casestd-brødtext {
       width: 100%;
-      max-width: 1080px;
+      max-width: 100%;
       box-sizing: border-box;
-      height: 134px;
-      flex-shrink: 0;
-      flex: 64;
+ 
       color: #232323;
       font-family: Rubik;
       font-size: 18px;
       font-weight: 400;
-      line-height: 26px; /* 144.444% - MRA: ???? Denne kommentaren kommer fra Figma, aner ikke hva greia er lol*/
-      padding-right: 65px;
-      padding-left: 65px;
+      line-height: 26px;
 
       margin: 0 auto; /* centers the content inside the flex box */
     }    
 
     #rjjpadding {
-      width: 315px;
-      height: 134px;
+      width: clamp(280px, 35vw, 450px);  /* 👈 scales from 280px to 450px based on viewport */
+  height: auto;
+  max-width: 100%;
+
+
       padding-top: 34px;
-      padding-left: 30px;
+  
       padding-bottom: 34px;
       padding-right: 60px;
 
       box-sizing: border-box;
-  max-width: 100%;
-  height: auto; /* let it scale naturally */
+
     }
 
     #h2padding {
 
-  padding-left: 65px; /* optional: to keep some spacing */
-  padding-right: 65px;
-  
-  max-width: 950px;
-  margin: 0 auto;
+      width: 100%;
+      max-width: 100%; /* Let it fill the space inside .casestd-box */
+      margin: 0; /* Remove centering */
+      padding: 0; /* Remove padding */
+    
+      box-sizing: border-box;
 }
 
-.h2margin {
-  display: inline-block;
-  text-align: left;
-  padding-left: 20px;  /* 👈 This is your "tekstmarg" */
-
-}
 
     /* ARTIKLER */
 
