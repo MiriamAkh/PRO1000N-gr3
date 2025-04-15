@@ -227,10 +227,11 @@ nav {
     display: block;
     position: absolute;  /* eller fixed, avhengig av ditt oppsett */
     top: 0; /* eller 100px, om det er navbarets høyde */
-    right: 100px;
+    right: 75px;
     z-index: 1; /* Sørger for at menyen ligger over andre elementer */
     border-radius: 18px;
-    background-color: var(--navbar-tekst-farge); 
+    background-color: var(--navbar-tekst-farge);
+    padding: 5px;
   }
 
 
@@ -272,7 +273,7 @@ nav {
   .nivå2.aktiv {
     display: block;
     position: relative;
-    border-radius: 18px;
+    border-radius: 0px;
     background-color: #54895E;
   }
 
@@ -284,7 +285,12 @@ nav {
 
   .nivå2 li a:hover {
     background: linear-gradient(to bottom, #54895E 0%, #000F02 50%, #54895E 100%);
-    border-radius: 18px;
+    border-radius: 0px;
+  }
+
+  .nivå1 li p:hover {
+    background: linear-gradient(to bottom, #325438 0%, #000F02 50%, #325438 100%);
+    border-radius: 0px;
   }
 }
 
