@@ -115,7 +115,7 @@ nav {
 
 .nivå1-punkt:hover .nivå2 {
   display: block;
-  border-top: 1px solid black;
+  border-top: 1px solid #27422c;
 }
 
 /* Rotér pilen opp når menyen er synlig */
@@ -168,7 +168,7 @@ nav {
   gap: 8px;
   text-decoration: none;
   color: black;
-  font-weight: bold;
+  font-weight: normal;
 }
 
 /* Footer: Underline on hover */
@@ -181,14 +181,14 @@ nav {
   margin: 0 20px;
   color: black;
   text-decoration: none;
-  font-weight: bold;
+  font-weight: normal;
 }
 
 /* Footer: Text-alignment */
 .footer-text {
   margin-left: auto;
   font-size: 14px;
-  font-weight: bold;
+  font-weight: normal;
 }
 
 /* Footer: Ikoner */
@@ -274,7 +274,8 @@ nav {
   .nivå2.aktiv {
     display: block;
     position: relative;
-    border-radius: 0px;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
     background-color: #54895E;
   }
 
@@ -295,6 +296,7 @@ nav {
   }
 }
 
+/* Footer */
 
 @media screen and (max-width: 768px) {
   .footer-content {
@@ -306,6 +308,7 @@ nav {
   .footer-text {
     margin-left: 0;
     text-align: center;
+    font-weight: normal;
   }
 
   .footer-icons {
