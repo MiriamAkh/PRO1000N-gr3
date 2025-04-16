@@ -31,7 +31,7 @@ html, body {
 
 #banner-container-hvemervi {
   display: flex;
-  gap: 2vw; /* Mellomrom mellom tekst og bilde */
+  gap: 5vw; /* Mellomrom mellom tekst og bilde */
   width: 90%; 
   align-items: center; /* Vertikalt sentrerer innholdet i containeren */
   justify-content: left;
@@ -42,7 +42,6 @@ html, body {
   color:#FEFEFE;
   font-family: Rubik;
   font-size: clamp(1rem, 1.3vw, 1.3rem); /* Bruk clamp for responsiv font-størrelse */
-  max-width: 60vw;
 }
 
 #banner-tekst h1 {
@@ -55,11 +54,31 @@ html, body {
   display: flex;
   justify-content: left;
   align-items:start; /* Vertikalt sentrerer bildet innenfor banner-bilde */
+  max-width: fit-content;
 }
 
 #front-image {
-  min-width: 50%;
-  object-fit:contain;
+  width: 100%;
+  object-fit:cover;
+}
+
+/* Media query for skjermer mindre enn 768px */
+@media screen and (max-width: 768px) {
+  #banner-container-hvemervi {
+    flex-direction: column; /* Endrer retning til kolonne for stacking */
+    align-items: flex-start; /* Justerer innhold til venstre */
+  }
+
+  #banner-tekst, 
+  #banner-bilde {
+    flex: 100; /* Lar elementene ta opp full bredde */
+    max-width: 100%; /* Sikrer at elementene fyller containeren */
+  }
+
+  #banner-bilde {
+    justify-content: center; /* Sentraliserer bildet når det er under teksten */
+    align-items: center; /* Sentraliserer bildet når det er under teksten */
+  }
 }
 
 /* --- Main --- */
