@@ -44,21 +44,19 @@ html, body {
 }
 
 #banner-bilde {
-  flex: 40;
+  flex: 50;
   display: flex;
   justify-content: left;
-  align-items:center;
-  height: 100%;
+  align-items:start; /* Vertikalt sentrerer bildet innenfor banner-bilde */
+  max-width: fit-content;
 }
 
 #front-image {
-  flex-shrink: 0;
-  max-width: 45%;
-  object-fit: cover;
-
+  width: 100%;
+  object-fit:cover;
 }
 
- /* KOM I GANG-knapp */
+/* KOM I GANG-knapp */
 
 .scroll-button {
   padding: 10px;
@@ -81,11 +79,6 @@ html, body {
   
 }
 
-#front-image {
-  width: 60%;
-  flex-shrink: 0;
-  object-fit: cover;
-}
 
 /* MAIN - Boksene! */
 
@@ -195,21 +188,19 @@ color: #1C321E;
 
 /* "Responsive Styling" -chatgpt ¯\_(ツ)_/¯ */
 @media screen and (max-width: 768px) {
-  #banner {
-      flex-direction: column;
-      height: auto;
+  #banner-container {
+    flex-direction: column; /* Endrer retning til kolonne for stacking */
+    align-items: flex-start; /* Justerer innhold til venstre */
   }
-  .text-box {
-      width: 100%;
-      height: auto;
+  #banner-tekst {
+      flex:100;
   }
-  #front-image {
-      width: 100%;
-      height: auto;
+  #banner-bilde {
+      flex:100;
+      justify-content: center; /* Sentraliserer bildet når det er under teksten */
+      align-items: center; /* Sentraliserer bildet når det er under teksten */
   }
   .box-container {
     grid-template-columns: 1fr;
   }
 }
-
-
