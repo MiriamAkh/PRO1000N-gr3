@@ -48,9 +48,11 @@ nav {
 
 .nav-knapp {
     color: var(--navbar-tekst-farge);
-    font-size: 24px;
+    font-size: 20px;
     font-family: "Hammersmith One";
-    padding: 8px;
+    padding: 16px;
+    padding-top: 8px;
+    padding-bottom: 8px;
     margin: 0;
     cursor: pointer;
     border-radius: 18px;
@@ -60,7 +62,7 @@ nav {
 .nivå1 {
   display: flex;
   margin-right: 1%;
-  gap: 3vw;
+  gap: 1vw;
   padding-right: 5vw;
 }
 
@@ -89,6 +91,7 @@ nav {
   border-bottom-left-radius: 18px;
   border-bottom-right-radius: 18px;
   border-bottom: 1.5px solid #024008;
+  white-space: nowrap;
 }
 
 
@@ -97,7 +100,6 @@ nav {
   color: var(--navnbar-bakgrunnsfarge);          /* Hvit tekst */
   display: block;
   text-decoration: none;
-  
 }
 
 /* Hover-effekt på hvert menypunkt i nedtrekksmenyen */

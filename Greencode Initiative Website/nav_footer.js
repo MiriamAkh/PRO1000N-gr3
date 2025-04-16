@@ -100,18 +100,18 @@ navbar.appendChild(divLogo);
 
 // Lister med undermenyer
 let baerekraft = [
-  {tekst: "Grønn kode", link: "1_bærekraft_artikler.html"},
-  {tekst: "Case-Studie", link: "1_bærekraft_casestudie.html"},
+  {tekst: "ARTIKLER", link: "1_bærekraft_artikler.html"},
+  {tekst: "CASE-STUDIER", link: "1_bærekraft_casestudie.html"},
 ]
 
 let sertifisering = [
-  {tekst: "Informasjon", link: "3_sertifisering_info.html"},
-  {tekst: "Søknadsskjema", link: "3_sertifisering_søknad.html"},
+  {tekst: "INFORMASJON", link: "3_sertifisering_info.html"},
+  {tekst: "SØKNADSSKJEMA", link: "3_sertifisering_søknad.html"},
 ]
 
 let omOssMeny = [
-  {tekst: "Hvem er vi", link: "4_omoss_hvemervi.html"},
-  {tekst: "Kontakt", link: "4_omoss_kontakt.html"},
+  {tekst: "HVEM ER VI", link: "4_omoss_hvemervi.html"},
+  {tekst: "KONTAKT", link: "4_omoss_kontakt.html"},
   {tekst: "FAQ", link: "4_omoss_FAQ.html"},
 ]
 
