@@ -16,7 +16,6 @@ nav {
     left: 0;
     height: var(--navbar-hoyde);
     z-index: 100;
-    padding-right: 10vw;
 }
 
 .logo {
@@ -61,7 +60,8 @@ nav {
 .nivå1 {
   display: flex;
   margin-right: 1%;
-  gap: 16px;
+  gap: 3vw;
+  padding-right: 5vw;
 }
 
 .nivå1-punkt:hover p{
