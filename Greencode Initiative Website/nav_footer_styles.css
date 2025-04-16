@@ -18,6 +18,11 @@ nav {
     z-index: 100;
 }
 
+.logo-tekst {
+  margin: 0;
+  padding: 0;
+}
+
 .logo {
   margin-right: auto;
   color: #54895E;
@@ -28,10 +33,7 @@ nav {
   margin-left: 5vw;
 }
 
-.logo-tekst {
-  margin: 0;
-  padding: 0;
-}
+
 
 .logo:hover .logo-tekst{
   color: #214127;
@@ -56,14 +58,13 @@ nav {
     margin: 0;
     cursor: pointer;
     border-radius: 18px;
-    line-height: 24px;
+    line-height: 20px;
 }
 
 .nivå1 {
   display: flex;
-  margin-right: 1%;
-  gap: 1vw;
-  padding-right: 5vw;
+  gap: 1.5vw;
+  padding-right: 4vw;
 }
 
 .nivå1-punkt:hover p{
@@ -100,6 +101,9 @@ nav {
   color: var(--navnbar-bakgrunnsfarge);          /* Hvit tekst */
   display: block;
   text-decoration: none;
+  font-size: 18px;
+  line-height: 18px;
+  text-align: center;
 }
 
 /* Hover-effekt på hvert menypunkt i nedtrekksmenyen */
@@ -249,8 +253,8 @@ nav {
     display: none;
   }
 
-  .nivå1-punkt:hover .nivå2 {
-    border-top: none;
+  .nivå1.aktiv .nivå2 {
+    border-top: 1.5px solid #024008;
   }
 
   .nivå1-punkt:hover .pil {
@@ -279,7 +283,7 @@ nav {
     position: relative;
     border-bottom-left-radius: 10px;
     border-bottom-right-radius: 10px;
-    background-color: #54895E;
+    background-color: var(--navbar-tekst-farge);
   }
 
   .nivå2.aktiv > li {
