@@ -237,7 +237,7 @@ nav {
     display: block;
     position: absolute;  /* eller fixed, avhengig av ditt oppsett */
     top: 0; /* eller 100px, om det er navbarets høyde */
-    right: 75px;
+    right: 85px;
     z-index: 1; /* Sørger for at menyen ligger over andre elementer */
     border-radius: 18px;
     background-color: var(--navbar-tekst-farge);
@@ -285,7 +285,7 @@ nav {
     position: relative;
     border-bottom-left-radius: 10px;
     border-bottom-right-radius: 10px;
-    background-color: #54895E;
+    background-color: var(--navbar-tekst-farge);
   }
 
   .nivå2.aktiv > li {
