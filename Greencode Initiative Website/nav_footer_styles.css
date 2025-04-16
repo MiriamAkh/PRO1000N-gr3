@@ -88,6 +88,7 @@ nav {
   width: 100%;
   border-bottom-left-radius: 18px;
   border-bottom-right-radius: 18px;
+  border-bottom: 1.5px solid #024008;
 }
 
 
@@ -101,7 +102,7 @@ nav {
 
 /* Hover-effekt på hvert menypunkt i nedtrekksmenyen */
 .nivå2 li a:hover {
-  background: linear-gradient(to bottom, #325438 0%, #000F02 50%, #325438 100%);
+  background: linear-gradient(0deg, #000F02 0%, #325438 100%);
   border-top-left-radius: 0;
   border-top-right-radius: 0;
 }
@@ -270,7 +271,7 @@ nav {
     color: var(--navnbar-bakgrunnsfarge)   
   }
 
-  /* Plassering av første nivå undermeny (for eksempel under "Tjenester") */
+  /* Plassering av første nivå undermeny (for eksempel under "Ressurser") */
   .nivå2.aktiv {
     display: block;
     position: relative;
