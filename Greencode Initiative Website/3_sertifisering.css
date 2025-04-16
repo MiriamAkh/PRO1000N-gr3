@@ -62,7 +62,7 @@ main {
 .container {
   top:0;
   display:block;
-  width: 70%;
+  max-width: 70vw; /*holder boksene innenfor horisontal scroll */
   background-color: #F1F1F1;
   border-radius: 18px;
   margin:auto;

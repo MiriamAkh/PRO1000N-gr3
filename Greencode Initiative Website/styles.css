@@ -31,7 +31,7 @@ html, body {
 #banner-tekst {
   padding-left: 5vw;
   padding-top: 3vw;
-  flex: 60;
+  flex: 45;
   color:#FEFEFE;
   font-family: Rubik;
   font-size: clamp(1rem, 1.3vw, 1.3rem); /* Bruk clamp for responsiv font-størrelse */
@@ -44,7 +44,7 @@ html, body {
 }
 
 #banner-bilde {
-  flex: 50;
+  flex: 55;
   display: flex;
   justify-content: left;
   align-items:start; /* Vertikalt sentrerer bildet innenfor banner-bilde */
@@ -90,7 +90,7 @@ main {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   gap: 60px; /* Mellomrom mellom bokser */
-  max-width: 70%; /*holder boksene innenfor horisontal scroll */
+  max-width: 70vw; /*holder boksene innenfor horisontal scroll */
   margin: 60px auto;
 }
 
