@@ -50,11 +50,11 @@ function createButtonNedtrekk(knappTekst, liste) {
   
   //Lager hovedknappen man hovrer over for å få nedtrekksmenyen frem
   let li1 = document.createElement("li");
-  li1.classList.add("nivå1-punkt")
+  li1.classList.add("nivå1-punkt");
   let p = createButton(knappTekst);
-  p.classList.add("nedtrekk-knapp")
-  li1.appendChild(p);
-  
+  let span = document.createElement("span");
+  span.classList.add("pil");
+  span.innerHTML = "&#x25BE";
   
   //Lager nedtrekksmenyen
   let ul2 = document.createElement("ul");
@@ -64,14 +64,18 @@ function createButtonNedtrekk(knappTekst, liste) {
     li2.classList.add("nivå2-punkt")
     let a = document.createElement("a");
     a.href = knapp.link;
-    a.innerHTML = knapp.tekst
+    a.innerHTML = "&nbsp;" + knapp.tekst;
     a.classList.add("nav-knapp")
     li2.appendChild(a)
     ul2.appendChild(li2)  
   })
   li1.addEventListener("click", function() {
     ul2.classList.toggle("aktiv");
+    span.classList.toggle("rotert");
   });
+  p.appendChild(span);
+  p.classList.add("nedtrekk-knapp")
+  li1.appendChild(p);
   li1.appendChild(ul2);
   ul1.appendChild(li1);
   navbar.appendChild(ul1);
@@ -100,18 +104,18 @@ navbar.appendChild(divLogo);
 
 // Lister med undermenyer
 let baerekraft = [
-  {tekst: "ARTIKLER", link: "1_bærekraft_artikler.html"},
-  {tekst: "CASE-STUDIER", link: "1_bærekraft_casestudie.html"},
+  {tekst: "Artikler", link: "1_bærekraft_artikler.html"},
+  {tekst: "Case-Studier", link: "1_bærekraft_casestudie.html"},
 ]
 
 let sertifisering = [
-  {tekst: "INFORMASJON", link: "3_sertifisering_info.html"},
-  {tekst: "SØKNADSSKJEMA", link: "3_sertifisering_søknad.html"},
+  {tekst: "Informasjon", link: "3_sertifisering_info.html"},
+  {tekst: "Søknadsskjema", link: "3_sertifisering_søknad.html"},
 ]
 
 let omOssMeny = [
-  {tekst: "HVEM ER VI", link: "4_omoss_hvemervi.html"},
-  {tekst: "KONTAKT", link: "4_omoss_kontakt.html"},
+  {tekst: "Hvem er vi", link: "4_omoss_hvemervi.html"},
+  {tekst: "Kontakt", link: "4_omoss_kontakt.html"},
   {tekst: "FAQ", link: "4_omoss_FAQ.html"},
 ]
 
@@ -121,10 +125,10 @@ let ul1 = document.createElement("ul");
 ul1.classList.add("nivå1");
 
 //Lager menyknappene
-createButtonNedtrekk(`BÆREKRAFT<span class="pil">&#x25BE</span>`, baerekraft);
+createButtonNedtrekk(`BÆREKRAFT`, baerekraft);
 createButtonLink("RESSURSER", "2_ressurser.html");
-createButtonNedtrekk(`SERTIFISERING<span class="pil">&#x25BE</span>`, sertifisering);
-createButtonNedtrekk(`OM OSS<span class="pil">&#x25BE</span> &nbsp`, omOssMeny);
+createButtonNedtrekk(`SERTIFISERING`, sertifisering);
+createButtonNedtrekk(`OM OSS`, omOssMeny);
 
 let divHam = document.createElement("div");
 divHam.classList.add("hamburger")
