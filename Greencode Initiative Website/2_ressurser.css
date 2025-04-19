@@ -17,16 +17,7 @@ html, body {
   background: linear-gradient(180deg, #214127 60%, #CEEEC1 193.84%);
   color: white;
   justify-content: center;
-}
-
-#banner-container-main {
-  width: 70vw;
-  display: flex;  
-  padding-top: 20px;
-  padding-bottom: 20px;
-  padding-left: 10vw;
-  align-items: center; /* Vertikalt sentrerer innholdet i containeren */
-  justify-content: center;
+  flex-direction: column;
 }
 
 #banner-container {
@@ -35,12 +26,19 @@ html, body {
   padding-top: 20px;
   padding-bottom: 20px;
   padding-left: 10vw;
+  padding-right: 5vw;
   align-items: top; /* Vertikalt sentrerer innholdet i containeren */
-  justify-content: left;
+  justify-content: center;
+}
+
+#tilbake-knapp {
+  flex:5;
+  justify-content: center; /* Sentraliserer bildet når det er under teksten */
+  align-items: top; 
 }
 
 #banner-tekst {
-  flex: 64;
+  flex: 60;
   color:#FEFEFE;
   font-family: Rubik;
   font-size: clamp(1rem, 1.3vw, 1.3rem); /* Bruk clamp for responsiv font-størrelse */
@@ -53,16 +51,17 @@ html, body {
 }
 
 #banner-bilde {
-  flex: 36;
-  display: flex;
-  justify-content: center;
-  align-items: left; /* Vertikalt sentrerer bildet innenfor banner-bilde */
+  flex: 35;
+  justify-content: left;
+  align-items: center; /* Vertikalt sentrerer bildet innenfor banner-bilde */
+  width: 100%;
+  height: auto;
 }
 
 #kodegutt {
   min-width: 100px;
   max-height: 200px;
-  object-fit: contain;
+  object-fit: cover;
 }
 
 /* Verktøy-banner: tilbakeknapp */
@@ -92,6 +91,7 @@ html, body {
   content: url('images/tilbake_pil_hover.png');
 }
 
+
 /* --- Main --- */
 
 main {
@@ -102,9 +102,10 @@ main {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   gap: 60px; /* Mellomrom mellom bokser */
-  max-width: 75%; /*holder boksene innenfor horisontal scroll */
+  max-width: 70vw; /*holder boksene innenfor horisontal scroll */
   margin: 60px auto;
 }
+
 
 /* Boksene! */
 
@@ -280,22 +281,81 @@ color: #1C321E;
 }
 
 
+/* SJEKKLISTE */
 
-/* "Responsive Styling" -chatgpt ¯\_(ツ)_/¯ */
+.sjekkliste-boks {
+  border-bottom-left-radius: 20px;
+  border-bottom-right-radius: 20px;
+  background: #F1F1F1;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  width: 100%;
+max-width: 60vw;; /* 👈 Limit width on large screens */
+padding-top: 60px;
+padding-bottom: 20px;
+
+padding-left: 60px; /* sdjkgfdhkjgf */
+padding-right: 60px;
+
+margin: 0 auto; /* 👈 Center the box itself */
+}
+
+.sjekkliste-tekst {
+  width: 100%;
+  max-width: 100%;
+  box-sizing: border-box;
+
+  color: #232323;
+  font-family: Rubik;
+  font-size: clamp(1rem, 1.7vw, 1.2rem);
+  font-weight: 400;
+  line-height: 26px;
+
+  margin: 0 auto; /* centers the content inside the flex box */
+    
+  h3 {
+    font-size: clamp(1rem, 2vw, 1.5rem); /* Bruk clamp for responsiv font-størrelse */
+    margin: 0;
+    text-decoration: underline;
+  }
+  ol {
+    margin: 0;
+    padding: 0;
+    list-style-position: inside; /* Sikrer at nummereringen er innenfor margin */
+  }
+  ul {
+    margin: 0;
+    padding: 0;
+    list-style: disc;
+    list-style-position: inside; /* Sikrer at nummereringen er innenfor margin */
+
+  }
+}
+
+/* Media query for skjermer mindre enn 768px */
 @media screen and (max-width: 768px) {
-  #banner {
-      flex-direction: column;
-      height: auto;
+  #banner-container {
+    flex-direction: column; /* Endrer retning til kolonne for stacking */
+    align-items: flex-start; /* Justerer innhold til venstre */
   }
-  .text-box {
-      width: 100%;
-      height: auto;
+
+  #banner-tekst, 
+  #banner-bilde {
+    flex: 100; /* Lar elementene ta opp full bredde */
+    max-width: 100%; /* Sikrer at elementene fyller containeren */
   }
-  .image {
-      width: 100%;
-      height: auto;
+
+  #banner-bilde {
+    justify-content: center; /* Sentraliserer bildet når det er under teksten */
+    align-items: center; /* Sentraliserer bildet når det er under teksten */
   }
+
   .box-container {
+    display: grid;
     grid-template-columns: 1fr;
   }
 }
