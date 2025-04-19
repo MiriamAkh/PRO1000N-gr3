@@ -21,9 +21,10 @@ html, body {
 
 #banner-container {
   display: flex;
-  width: 80vw;
+  width: 70vw;
   padding-top: 20px;
   padding-bottom: 20px;
+  padding-right: 15vw;
   display: flex;  
   align-items: center; /* Vertikalt sentrerer innholdet i containeren */
   justify-content: left;
@@ -62,24 +63,6 @@ html, body {
   object-fit:cover;
 }
 
-/* Media query for skjermer mindre enn 768px */
-@media screen and (max-width: 768px) {
-  #banner-container-hvemervi {
-    flex-direction: column; /* Endrer retning til kolonne for stacking */
-    align-items: flex-start; /* Justerer innhold til venstre */
-  }
-
-  #banner-tekst, 
-  #banner-bilde {
-    flex: 100; /* Lar elementene ta opp full bredde */
-    max-width: 100%; /* Sikrer at elementene fyller containeren */
-  }
-
-  #banner-bilde {
-    justify-content: center; /* Sentraliserer bildet når det er under teksten */
-    align-items: center; /* Sentraliserer bildet når det er under teksten */
-  }
-}
 
 /* --- Main --- */
 main {
@@ -96,15 +79,22 @@ main {
 }
 
 .container {
-  top:0;
-  display:block;
-  width: 70%;
-  background-color: #F1F1F1;
-  border-radius: 18px;
-  margin:auto;
-  margin-top: 60px;
-  padding-bottom: 36px;
-}
+  border-bottom-left-radius: 20px;
+  border-bottom-right-radius: 20px;
+  background: #F1F1F1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  max-width: 60vw; /* 👈 Limit width on large screens */
+  padding-top: 20px;
+  padding-bottom: 20px;
+  padding-left: 60px; /* boksens bredde utenfor teksten */
+  padding-right: 60px;
+  
+  margin: 0 auto; /* 👈 Center the box itself */
+  }
 
 .container-skjema {
   top:0;
@@ -120,12 +110,35 @@ main {
 }
 
 .container-tekst {
-  clear: both;
-  width: 60vw;
-  font-family: Rubik;
+  width: 100%;
+  max-width: 100%;
+  box-sizing: border-box;
+
   color: #232323;
-  font-size: 18px;
-  margin:auto;
+  font-family: Rubik;
+  font-size: clamp(1rem, 1.7vw, 1.2rem);
+  font-weight: 400;
+  line-height: 26px;
+
+  margin: 0 auto; /* centers the content inside the flex box */
+    
+  h3 {
+    font-size: clamp(1rem, 2vw, 1.5rem); /* Bruk clamp for responsiv font-størrelse */
+    margin: 0;
+    text-decoration: underline;
+  }
+  ol {
+    margin: 0;
+    padding: 0;
+    list-style-position: inside; /* Sikrer at nummereringen er innenfor margin */
+  }
+  ul {
+    margin: 0;
+    padding: 0;
+    list-style: disc;
+    list-style-position: inside; /* Sikrer at nummereringen er innenfor margin */
+
+  }
 }
 
 #picture-text {
@@ -181,5 +194,22 @@ main {
 
 
 
+/* Media query for skjermer mindre enn 768px */
+@media screen and (max-width: 768px) {
+  #banner-container-hvemervi {
+    flex-direction: column; /* Endrer retning til kolonne for stacking */
+    align-items: flex-start; /* Justerer innhold til venstre */
+  }
 
+  #banner-tekst, 
+  #banner-bilde {
+    flex: 100; /* Lar elementene ta opp full bredde */
+    max-width: 100%; /* Sikrer at elementene fyller containeren */
+  }
+
+  #banner-bilde {
+    justify-content: center; /* Sentraliserer bildet når det er under teksten */
+    align-items: center; /* Sentraliserer bildet når det er under teksten */
+  }
+}
 
