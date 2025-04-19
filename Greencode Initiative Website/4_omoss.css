@@ -196,9 +196,15 @@ main {
 
 /* Media query for skjermer mindre enn 768px */
 @media screen and (max-width: 768px) {
+
+  #banner {
+    justify-content: center;
+  }
+
   #banner-container-hvemervi {
     flex-direction: column; /* Endrer retning til kolonne for stacking */
     align-items: flex-start; /* Justerer innhold til venstre */
+    gap: none;
   }
 
   #banner-tekst, 
@@ -210,6 +216,7 @@ main {
   #banner-bilde {
     justify-content: center; /* Sentraliserer bildet når det er under teksten */
     align-items: center; /* Sentraliserer bildet når det er under teksten */
+    padding-bottom: 2vw;
   }
 }
 
