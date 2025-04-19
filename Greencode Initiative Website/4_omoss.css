@@ -207,16 +207,18 @@ main {
     gap: none;
   }
 
-  #banner-tekst, 
-  #banner-bilde {
+  #banner-tekst {
     flex: 100; /* Lar elementene ta opp full bredde */
     max-width: 100%; /* Sikrer at elementene fyller containeren */
+    padding-top: 4vw;
   }
 
   #banner-bilde {
+    flex: 100; /* Lar elementene ta opp full bredde */
+    max-width: 100%; /* Sikrer at elementene fyller containeren */
+    padding-bottom: 4vw;
     justify-content: center; /* Sentraliserer bildet når det er under teksten */
     align-items: center; /* Sentraliserer bildet når det er under teksten */
-    padding-bottom: 2vw;
   }
 }
 
