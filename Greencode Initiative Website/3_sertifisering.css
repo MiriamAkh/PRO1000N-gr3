@@ -143,3 +143,22 @@ main {
 }
 
 
+/* Media query for skjermer mindre enn 768px */
+@media screen and (max-width: 768px) {
+  #banner-container {
+    flex-direction: column; /* Endrer retning til kolonne for stacking */
+    align-items: flex-start; /* Justerer innhold til venstre */
+  }
+
+  #banner-tekst, 
+  #banner-bilde {
+    flex: 100; /* Lar elementene ta opp full bredde */
+    max-width: 100%; /* Sikrer at elementene fyller containeren */
+  }
+
+  #banner-bilde {
+    justify-content: center; /* Sentraliserer bildet når det er under teksten */
+    align-items: center; /* Sentraliserer bildet når det er under teksten */
+  }
+
+}
