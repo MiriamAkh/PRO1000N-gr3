@@ -161,4 +161,11 @@ main {
     align-items: center; /* Sentraliserer bildet når det er under teksten */
   }
 
+  .button {
+    font-size: 22px;
+    padding: 14px;
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+
 }
