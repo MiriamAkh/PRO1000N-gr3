@@ -137,8 +137,18 @@ main {
     padding: 0;
     list-style: disc;
     list-style-position: inside; /* Sikrer at nummereringen er innenfor margin */
-
   }
+}
+
+.container-tekst-skjema {
+  width: 60vw;
+  font-family: Rubik;
+  color: #232323;
+  font-size: 18px;
+  margin:auto;
+  overflow-wrap: break-word; /* ✅ Breaks long words instead of overflowing */
+  word-break: break-word;   /* ✅ Additional safety */
+  padding-top: 60px;
 }
 
 #picture-text {
@@ -219,6 +229,10 @@ main {
     padding-bottom: 4vw;
     justify-content: center; /* Sentraliserer bildet når det er under teksten */
     align-items: center; /* Sentraliserer bildet når det er under teksten */
+  }
+
+  .container-skjema {
+    width: 90vw;
   }
 }
 
