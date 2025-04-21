@@ -167,7 +167,7 @@ color: #1C321E;
 }
 
 #box0:hover #icon0 {
-  transform: scale(1.02);
+  transform: scale(1);
   content: url('images/komigang_hover2.svg');
 }
 
