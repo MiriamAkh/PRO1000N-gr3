@@ -57,28 +57,49 @@ html, body {
 }
 
 /* KOM I GANG-knapp */
+#box0 {
+  display: flex;
+  height: 6vw; /* Bevarer aspektforholdet */
+  
+  width: 100%;
+  justify-content: right;
+  align-self: flex-end;
+}
+
+.button-container {
+  display: flex;
+  justify-content: flex-end; /* Høyrejusterer knappen i tekstboksen */
+}
+
+#tom {
+  flex: 80;
+}
 
 .scroll-button {
-  padding: 10px;
-  width: 100%;
+  padding: 0;
+  width: fit-content;
   border: none;
   background-color: transparent;
   color: #FEFEFE;
   cursor: pointer;
   display: flex;
-  justify-content: right;
- 
+  flex: 20;
+  justify-content: center;
 }
 
 #icon0 {
-  width: 22vw;
+  width: auto; /* Bevarer aspektforholdet */
   max-width: 250px;
-  min-width: 100px;
-  height: auto; /* Bevarer aspektforholdet */
+  min-width: 150px;
+  height: 6vw; 
   transition: width 0.05s; /* Animasjonseffekt ved skalering */
-  
+  transform-origin: center;
 }
 
+#box0:hover #icon0 {
+  transform: scale(1);
+  content: url('images/komigang_hover2.svg');
+}
 
 /* MAIN - Boksene! */
 
@@ -162,14 +183,6 @@ color: #1C321E;
   flex-grow: 1;
 }
 
-#box0 {
-  align-self: flex-end;
-}
-
-#box0:hover #icon0 {
-  transform: scale(1);
-  content: url('images/komigang_hover2.svg');
-}
 
 #box1:hover #icon1 {
   transform: scale(1.1);
