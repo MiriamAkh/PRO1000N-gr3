@@ -46,7 +46,7 @@
             <div class="container-tekst">
                 <h1>Søknadsskjema for GreenCode sertifisering</h1>
                 <h4>Informasjon om bedriften</h4>
-                <form id="soknad-form" action="https://formsubmit.co/273970@usn.no" method="POST">
+                <form id="soknad-form" action="https://formsubmit.co/sov83@hotmail.no" method="POST">
                     <label>Navn på bedriften som søker sertifisering *<br></label>
                     <input type="text" style="width:50%;" name="Bedriftnavn" required
                         oninvalid="this.setCustomValidity('Fyll inn navn på bedriften.')"
@@ -68,32 +68,51 @@
                     </p>
                     <br>
                     <br>
-
-                    <label>Effektiv ressursbruk</label><br>
-                    <textarea rows="4" style="width: 100%; height: 128px;" name="Effektiv-ressursbruk"></textarea><br><br>
-                    <label>Energieffiktivitet</label><br>
+                    <div id="info-boks">
+                        <span class="lukke-knapp" onclick="skjulInfo()">✖</span>
+                        <div id="info-boks-tekst"></div>
+                    </div>
+                    <label>Effektiv ressursbruk <img class="info-ikon" src="images/info.png" onclick="visInfo(this,
+                        `<h3>Effektiv ressursbruk</h3><p>Programvaren skal være utviklet med tanke på optimal bruk av maskinvare og nettverksressurser. Dette innebærer å skrive kode som er lett, rask og krever minst mulig prosessorkraft og minne – både under utvikling og ved kjøring.</p>`
+                    )">
+                    </label><br>
+                    <textarea rows="4" style="width: 100%; height: 128px;" name="Effektiv-ressursbruk"></textarea><br><br>                   
+                    <label>Energieffiktivitet <img class="info-ikon" src="images/info.png" onclick="visInfo(this,
+                        `<h3>Energieffektivitet</h3><p>Applikasjoner og systemer bør være designet for lavt energiforbruk, spesielt på klientenheter og servere. Bruk av energivennlige algoritmer, caching, og optimalisering av databasetilgang er sentrale faktorer her.</p>`
+                    )">
+                    </label><br>
                     <textarea rows="4" style="width: 100%; height: 128px;" name="Energieffiktivitet"></textarea><br><br>
-                    <label>Databevissthet og personvern</label><br>
+                    <label>Databevissthet og personvern <img class="info-ikon" src="images/info.png" onclick="visInfo(this,
+                        `<h3>Databevissthet og personvern</h3><p>Innsamling, lagring og behandling av data skal skje på en måte som både ivaretar personvern og minimerer unødvendig datatrafikk og lagringsbehov. Det innebærer også å slette eller arkivere inaktive data regelmessig.</p>`
+                    )">
+                    </label><br>
                     <textarea rows="4" style="width: 100%; height: 128px;" name="Databevissthet-personvern"></textarea><br><br>
-                    <label>Miljøvennlig drift</label><br>
+                    <label>Miljøvennlig drift <img class="info-ikon" src="images/info.png" onclick="visInfo(this,
+                        `<h3>Miljøvennlig drift</h3><p>Bruk av grønne datasentre, hostingtjenester med fornybar energi, og tiltak for å redusere karbonavtrykket fra IT-infrastrukturen er viktige deler av vurderingen.</p>`
+                    )">
+                    </label><br>
                     <textarea rows="4" style="width: 100%; height: 128px;" name="Miljøvennlig-drift"></textarea><br><br>
-                    <label>Livsløp og vedlikehold</label><br>
+                    <label>Livsløp og vedlikehold <img class="info-ikon" src="images/info.png" onclick="visInfo(this,
+                        `<h3>Livsløp og vedlikehold</h3><p>Programvaren skal være bygget med tanke på lang levetid, enkel vedlikeholdbarhet og mulighet for gjenbruk av komponenter. Unngå &quot;teknisk gjeld&quot; og kortvarige løsninger som krever hyppig utskifting.</p>`
+                    )">
+                    </label><br>
                     <textarea rows="4" style="width: 100%; height: 128px;" name="Livsløp-vedlikehold"></textarea><br><br>
-                    <label>Transparens og dokumentasjon</label><br>
+                    <label>Transparens og dokumentasjon <img class="info-ikon" src="images/info.png" onclick="visInfo(this,
+                        `<h3>Transparens og dokumentasjon</h3><p>Bedriften må kunne dokumentere sine grønne tiltak og være åpne om hvordan bærekraft er integrert i utviklingsprosessene. Det inkluderer både interne retningslinjer og rapportering av miljøpåvirkning der det er relevant.</p>`
+                    )">
+                    </label><br>
                     <textarea rows="4" style="width: 100%; height: 128px;" name="Transparens-vedlikehold"></textarea><br><br>
-                    <label>Bevissthet og opplæring</label><br>
+                    <label>Bevissthet og opplæring <img class="info-ikon" src="images/info.png" onclick="visInfo(this,
+                        `<h3>Bevissthet og opplæring</h3><p>Ansatte i teknologiske roller bør få opplæring i grønn kodepraksis, slik at bærekraft blir en naturlig del av utviklingskulturen.</p>`
+                    )">
+                    </label><br>
                     <textarea rows="4" style="width: 100%; height: 128px;" name="Bevissthet-opplæring"></textarea><br><br>
-                    <label> Jeg samtykker til at mine/våre data lagres og behandles i henhold til personvernerklæringen. </label>
-                        <input type="checkbox" required>                        
+                    <label> Jeg samtykker til at mine/våre data lagres og behandles i henhold til personvernerklæringen. * </label>
+                        <input type="checkbox" required>
+                        <a href="0_personvern.html" target="_blank">Les vår personvernerklæring</a>.                        
                     <br><br>
                 </form>
-                <p>Felter merket med * er påkrevde</p> 
-
-                
-                  <p style="font-size: 0.9em;">
-                    Når du sender inn skjemaet på vegne av deg selv eller din virksomhet, godtar du at vi lagrer og bruker dine/deres opplysninger for å kunne svare på din/deres henvendelse.
-                    <a href="0_personvern.html" target="_blank">Les vår personvernerklæring</a>.
-                  </p>              
+                <p>Felter merket med * er påkrevde</p>              
             </div>
             <div id="container-button">
                 <a href="#" onclick="sendInn()" class="button">SEND INN SØKNAD</a>
@@ -105,6 +124,20 @@
     </footer>
 
     <script>
+        function visInfo(ikon, tekst) {
+            const box = document.getElementById('info-boks');
+            const rect = ikon.getBoundingClientRect();
+
+            // Plasser info-boksen i samme høyde som ikonet
+            box.style.top = `${rect.top + window.scrollY}px`;
+            box.style.display = 'block';
+            document.getElementById("info-boks-tekst").innerHTML = tekst;
+        }
+
+        function skjulInfo() {
+            document.getElementById('info-boks').style.display = 'none';
+        }
+        
         function sendInn() {
             event.preventDefault();
             const form = document.getElementById('soknad-form');
