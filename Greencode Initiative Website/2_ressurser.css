@@ -20,12 +20,34 @@ html, body {
   flex-direction: column;
 }
 
-#banner-container {
-  width: 80vw;
+#banner-container-marg {
+  width: 90vw;
   display: flex;  
   padding-top: 20px;
   padding-bottom: 20px;
   padding-left: 10vw;
+  padding-right: none;
+  align-items: top; /* Vertikalt sentrerer innholdet i containeren */
+  justify-content: center;
+}
+
+#banner-container {
+  width: 85vw;
+  display: flex;  
+  padding-top: 20px;
+  padding-bottom: 20px;
+  padding-left: none;
+  padding-right: 5vw;
+  align-items: top; /* Vertikalt sentrerer innholdet i containeren */
+  justify-content: center;
+}
+
+#banner-container-forside {
+  width: 80vw;
+  display: flex;  
+  padding-top: 20px;
+  padding-bottom: 20px;
+  padding-left: 5vw;
   padding-right: 5vw;
   align-items: top; /* Vertikalt sentrerer innholdet i containeren */
   justify-content: center;
@@ -131,7 +153,7 @@ h2 {color: #1C321E;
   display: flex;
 }
 
-color: #1C321E;
+color: #232323;
   font-family: Rubik;
   font-size: 16px;
   font-style: normal;
@@ -341,6 +363,16 @@ margin: 0 auto; /* 👈 Center the box itself */
   #banner-container {
     flex-direction: column; /* Endrer retning til kolonne for stacking */
     align-items: flex-start; /* Justerer innhold til venstre */
+  }
+
+  #banner-container-forside {
+    flex-direction: column; /* Endrer retning til kolonne for stacking */
+    align-items: flex-start; /* Justerer innhold til venstre */
+    padding-left: 10vw;
+  }
+
+  #banner-container-marg {
+    padding-left: 5vw;
   }
 
   #banner-tekst, 
