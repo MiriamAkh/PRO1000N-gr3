@@ -111,6 +111,7 @@ let baerekraft = [
 let sertifisering = [
   {tekst: "Informasjon", link: "3_sertifisering_info.html"},
   {tekst: "Søknadsskjema", link: "3_sertifisering_søknad.html"},
+  {tekst: `<img src="images/GreenCode_Cert_Badge.png"style="height: 18px; vertical-align:bottom;">-Bedrifter`, link: "3_sertifisering_info.html"},
 ]
 
 let omOssMeny = [
