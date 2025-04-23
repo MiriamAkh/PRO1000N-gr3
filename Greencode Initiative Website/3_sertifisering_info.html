@@ -32,14 +32,19 @@
                 <p>
                     Her finner du informasjon om hvordan du og din virksomhet kan bli sertifisert 
                     som grønn(e) programvareutvikler(e). Kom å ta del i vår visjon, og bli en del av 
-                    GrennCode familien.
+                    GreenCode-familien.
                 </p>
+                <div id="box0">
+                    <button class="scroll-button" onclick="scrollDown()">          
+                        Klikk her for å se hvilke bedrifter som er GreenCode-sertifisert!
+                    </button>
+                </div>  
             </div>
             <div id="banner-bilde">
                 <img src="images/GreenCode_Cert_Badge.png" id="emblem" alt="Green Code sertifiserings-emblem">
             </div>
-            
-        </div>       
+        </div>    
+     
     </div>
 
     <!--Hovedinnhold på nettsiden-->
@@ -122,8 +127,7 @@
                 </p>
                 <h2>Hvordan søker jeg?</h2>
                 <p>
-                    For å søke om Grønn Kodepraksis-sertifisering, fyll ut søknadsskjemaet (følg
-                    lenka nedenfor). Når vi har mottatt søknaden din, vil vår sertifiseringskomité 
+                    For å søke om Grønn Kodepraksis-sertifisering, fyll ut søknadsskjemaet (klikk på knappen nedenfor). Når vi har mottatt søknaden din, vil vår sertifiseringskomité 
                     gjennomgå informasjonen og utføre en uavhengig vurdering av bedriftens 
                     bærekraftspraksis.
                 </p>
@@ -143,8 +147,7 @@
                 <a href="3_sertifisering_søknad.html" class="button">SØK OM SERTIFISERING</a>
             </div>
         </div>
-
-        <div class="container">
+        <div id="container-bedrifter">
             <div class="container-tekst">
                 <h1>Bedrifter belønnet med GreenCode sertifisering* </h1>
                 <h4>💡 GreenByte Analytics</h4>
@@ -195,6 +198,26 @@
     <!--Tekst langs bunnen-->
     <footer id="footer">
     </footer>
+
+  <!-- Scroller ned med "kom i gang" og "til toppen"-knapper -->
+  <script>
+    function scrollDown() {
+ const target = document.getElementById('container-bedrifter');
+ const offset = 120; // Endre denne for å justere mellomrom på toppen av scroll
+
+ const targetPosition = target.getBoundingClientRect().top + window.pageYOffset;
+    const scrollToPosition = targetPosition - offset;
+
+    window.scrollTo({
+      top: scrollToPosition,
+      behavior: 'smooth'
+    });
+  }
+        function scrollToTop() {
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        }
+    </script>
+
 
     <script src="nav_footer.js"></script>
 </body>

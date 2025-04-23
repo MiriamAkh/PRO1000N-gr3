@@ -59,15 +59,45 @@ main {
   display: block;
 }
 
+/* KOM I GANG-knapp */
+.scroll-button {
+  padding: none;
+  width: fit-content;
+  border:solid #253D27;
+  background-color:#214127;
+  border-radius: 5%;
+  color: #CEEEC1;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  font-family: Rubik;
+  font-size: clamp(1rem, 1.3vw, 1.3rem); /* Bruk clamp for responsiv font-størrelse */
+}
+.scroll-button:hover{
+  transform: scale(1);
+  color:#4FAA60;
+}
+
 .container {
+  top:0;
+  display:block;
+  max-width: 70vw; /*holder boksene innenfor horisontal scroll */
+  background-color: #F1F1F1;
+  border-bottom-left-radius: 18px;
+  border-bottom-right-radius: 18px;
+  margin:auto;
+  padding-bottom: 36px;
+}
+
+#container-bedrifter {
   top:0;
   display:block;
   max-width: 70vw; /*holder boksene innenfor horisontal scroll */
   background-color: #F1F1F1;
   border-radius: 18px;
   margin:auto;
-  margin-top: 60px;
   padding-bottom: 36px;
+  margin-top: 60px;
 }
 
 .container-skjema {
@@ -92,7 +122,7 @@ main {
   margin:auto;
   overflow-wrap: break-word; /* ✅ Breaks long words instead of overflowing */
   word-break: break-word;   /* ✅ Additional safety */
-  padding-top: 60px;
+  padding-top: 10px;
 }
 
 .info-ikon {

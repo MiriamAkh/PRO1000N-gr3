@@ -125,8 +125,8 @@ let ul1 = document.createElement("ul");
 ul1.classList.add("nivå1");
 
 //Lager menyknappene
-createButtonNedtrekk(`BÆREKRAFT`, baerekraft);
-createButtonLink("RESSURSER", "2_ressurser.html");
+createButtonNedtrekk(`GRØNN UTVIKLING`, baerekraft);
+createButtonLink("VERKTØYKASSE", "2_ressurser.html");
 createButtonNedtrekk(`SERTIFISERING`, sertifisering);
 createButtonNedtrekk(`OM OSS`, omOssMeny);
 
