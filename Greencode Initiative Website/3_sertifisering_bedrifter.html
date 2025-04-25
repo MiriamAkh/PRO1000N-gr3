@@ -1,0 +1,121 @@
+<!-- *** SERTIFISERING *** -->
+
+<!DOCTYPE html>
+<html lang="no">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Sertifisering | Greencode Initiative</title>
+    <link rel="stylesheet" href="3_sertifisering.css"> <!-- CSS stylesheets link-->  
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Aner ikke hva denne gjør men gpt ville legge den til:) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com"> <!--Linkz til Rubik font family-->
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap" rel="stylesheet">
+</head>
+
+
+<body>
+    <header>
+        <!--Tom navbar som fylles med innhold fra JavaScript-->
+        <nav id="navbar"></nav> 
+    </header>
+
+    <div id="banner">
+        <div id="banner-container">
+            <div id="banner-tekst">
+                <h1>GreenCode-sertifisering</h1>
+                <p>
+                    Vi heier på bedrifter som tør å satse på grønn kode. 
+                    Derfor ønsker vi å løfte frem de som viser en sunn og klimavennlig praksis i 
+                    deres programvareutviklingsprosesser.
+                </p>
+                <p>
+                    Her finner du informasjon om hvilke bedrifter som er blit sertifisert 
+                    som grønne programvareutviklere. 
+                </p>
+            </div>
+            <div id="banner-bilde">
+                <img src="images/GreenCode_Cert_Badge.png" id="emblem" alt="Green Code sertifiserings-emblem">
+            </div>
+        </div>    
+     
+    </div>
+
+    <!--Hovedinnhold på nettsiden-->
+    <main>
+        <div id="container-bedrifter">
+            <div class="container-tekst">
+                <h1>Bedrifter belønnet med GreenCode sertifisering* </h1>
+                <h4>💡 GreenByte Analytics</h4>
+                <p>
+                    Tilbyr datadrevne løsninger for klimaregnskap og bærekraftsmåling. <br><br>
+                    GreenByte har utviklet sitt eget rammeverk for "low-impact" databehandling, 
+                    og bruker serverparker som er sertifisert for karbonnøytral drift. De har også 
+                    etablert interne retningslinjer for grønn koding og tilbyr opplæring til alle 
+                    ansatte.
+                </p>
+                <h4>🌱 EcoSoft Solutions</h4>
+                <p>
+                    Spesialiserer seg på energieffektive bedriftsapplikasjoner for offentlig sektor. <br><br>
+                    EcoSoft har implementert en streng kodepolicy for energieffektiv utvikling og 
+                    benytter 100 % fornybar energi i sitt utviklingsmiljø. De har også redusert 
+                    dataoverføringen i sine applikasjoner med 40 % ved å optimalisere API-er og 
+                    bruke moderne datakomprimering.
+                </p>
+                <h4>🌍 VerdeTech Systems</h4>
+                <p>
+                    Leverer mobilapper og nettløsninger for utdanning i landlige områder. <br><br>
+                    VerdeTech har vist sterkt engasjement for grønn programvare ved å utvikle apper 
+                    som fungerer offline, med minimalt batteriforbruk og lave krav til maskinvare. 
+                    De har også et samarbeid med lokale miljøorganisasjoner for å fremme bærekraftig 
+                    teknologiutvikling.
+                </p>
+                <h4>⚙️ OptiCore Labs</h4>
+                <p>
+                    Utvikler skybaserte løsninger for logistikk og transportsektoren. <br><br>
+                    OptiCore bruker avanserte algoritmer for å redusere serverbruk og strømforbruk 
+                    under beregninger. Deres hovedplattform ble nylig redesignet med bærekraft som 
+                    hovedmål, noe som førte til 30 % reduksjon i energibruk på serversiden.
+                </p>
+                <h4>📦 ZenCart Collective</h4>
+                <p>
+                    Bygger bærekraftige e-handelsløsninger for små og mellomstore bedrifter. <br><br>
+                    ZenCart har integrert grønn kode i hele utviklingsprosessen og stiller krav til 
+                    sine samarbeidspartnere om miljørapportering. Plattformen deres prioriterer 
+                    energieffektiv lasting, dataminimalisme og serverdrift basert på fornybare kilder.
+                </p>
+            
+                <p><i>*Fiktive bedrifter ment til å illustrere hvordan en slik seksjon kan se ut.
+                  </i></p>
+            </div>
+        </div>
+    </main>
+
+    <!--Tekst langs bunnen-->
+    <footer id="footer">
+    </footer>
+
+  <!-- Scroller ned med "kom i gang" og "til toppen"-knapper -->
+  <script>
+    function scrollDown() {
+ const target = document.getElementById('container-bedrifter');
+ const offset = 120; // Endre denne for å justere mellomrom på toppen av scroll
+
+ const targetPosition = target.getBoundingClientRect().top + window.pageYOffset;
+    const scrollToPosition = targetPosition - offset;
+
+    window.scrollTo({
+      top: scrollToPosition,
+      behavior: 'smooth'
+    });
+  }
+        function scrollToTop() {
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        }
+    </script>
+
+
+    <script src="nav_footer.js"></script>
+</body>
+
+</html>
